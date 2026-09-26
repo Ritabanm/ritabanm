@@ -4,7 +4,15 @@
 ### AI Systems & Infrastructure Engineer | Agentic Runtimes | Applied ML Researcher
 **📍 New York City**
 
-[![Email](https://img.shields.io/badge/Email-ritabanmitra709%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ritabanmitra709@gmail.com)
+<br/>
+
+<a href="mailto:ritabanmitra709@gmail.com">
+  <img src="https://img.shields.io/badge/Email-ritabanmitra709%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ritaban" />
+</a>
+
+<br/>
+
+📧 **<a href="mailto:ritabanmitra709@gmail.com">ritabanmitra709@gmail.com</a>**
 
 ---
 
