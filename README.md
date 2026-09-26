@@ -45,6 +45,18 @@
   <img src="https://img.shields.io/badge/Datadog-632CA6?style=flat-square&logo=datadog&logoColor=white" alt="Datadog" />
 </p>
 
+### 🛠️ Featured Open Source Tools & Systems:
+
+| Project | Description | Stack |
+| :--- | :--- | :--- |
+| [**modern-ai-infra**](https://github.com/Ritabanm/modern-ai-infra) | Distributed scaling harness benchmarking 70B+ LLMs across multi-GPU nodes | `PyTorch` `Triton` `CUDA` |
+| [**adapt-iq**](https://github.com/Ritabanm/adapt-iq) | Cognitive flexibility benchmark for Google DeepMind &times; Kaggle AGI Challenge | `Python` `Benchmark` |
+| [**bridgedata-openvla**](https://github.com/Ritabanm/bridgedata-openvla-generalization) | Generalization & batched inference evaluation for Vision-Language-Action robotics | `Python` `Robotics` `VLA` |
+| [**OpenAI-Agent-Security**](https://github.com/Ritabanm/OpenAI-Agent-Security) | Threat simulation framework and sandboxing for autonomous agent tool loops | `Python` `Sandboxing` `AST` |
+| [**SynthArch-RL**](https://github.com/Ritabanm/SynthArch-RL) | Browser-native Q-Learning agent optimizing system architecture under SLA constraints | `JavaScript` `RL` |
+| [**DevSecops-toolkit**](https://github.com/Ritabanm/DevSecops-toolkit) | Developer security CLI for automated vulnerability detection and CI/CD gating | `Node.js` `Security` |
+| [**Hardware-programming-C**](https://github.com/Ritabanm/Hardware-programming-C) | Bare-metal register-level peripheral drivers for ARM Cortex-M microcontrollers | `C` `Bare-Metal` `ARM` |
+
 <br/>
 
 <p align="center">
