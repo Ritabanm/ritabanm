@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3.2">
+  <link rel="stylesheet" href="style.css?v=3.3">
 </head>
 
 <body>
@@ -220,19 +220,22 @@
       <section id="view-tools" class="tab-pane">
         <div class="section-hero" style="margin-bottom: 1.5rem;">
           <h2 class="section-title" style="font-size: 1.75rem; font-weight: 800; color: var(--text-white);">
-            Open Source Tools &amp; Libraries
+            Open Source Tools &amp; Deployed Apps
           </h2>
-          <p class="section-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem; max-width: 680px;">
-            Modular developer CLIs, system architecture planners, security scanners, and bare-metal embedded libraries built for real workloads.
+          <p class="section-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem; max-width: 720px;">
+            Production web applications, client-side developer utilities, architecture simulators, and bare-metal systems libraries built and deployed by Ritaban.
           </p>
         </div>
 
         <div class="tools-grid">
-          <!-- Tool 1: SynthArch-RL -->
+          <!-- App 1: SynthArch-RL -->
           <div class="tool-card">
             <div class="tool-header">
               <div>
-                <span class="badge-pill">RL &amp; System Architecture</span>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">RL &amp; System Architecture</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
                 <h3 class="tool-name">SynthArch: RL System Design Planner</h3>
               </div>
               <a href="https://github.com/Ritabanm/SynthArch-RL" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
@@ -242,7 +245,7 @@
               </a>
             </div>
             <p class="tool-desc">
-              Interactive browser-native systems design planner that trains a Q-Learning reinforcement learning agent directly in client JavaScript to optimize architecture layouts under SLA and cost constraints.
+              Interactive browser-native systems design planner that trains a Q-Learning reinforcement learning agent in real time to optimize architecture layouts under SLA and cost constraints.
             </p>
             <ul class="tool-features">
               <li>Markov Decision Process (MDP) for cloud architecture tiers</li>
@@ -254,17 +257,25 @@
             </div>
             <div class="tool-actions">
               <code class="tool-quick-run">git clone https://github.com/Ritabanm/SynthArch-RL</code>
-              <a href="https://github.com/Ritabanm/SynthArch-RL" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
-                View Repository &UpperRightArrow;
-              </a>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/SynthArch-RL/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/SynthArch-RL" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- Tool 2: DevSecops-toolkit -->
+          <!-- App 2: DevSecops-toolkit -->
           <div class="tool-card">
             <div class="tool-header">
               <div>
-                <span class="badge-pill">DevSecOps &amp; Tooling</span>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">DevSecOps &amp; Security</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
                 <h3 class="tool-name">DevSecops-toolkit</h3>
               </div>
               <a href="https://github.com/Ritabanm/DevSecops-toolkit" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
@@ -274,25 +285,310 @@
               </a>
             </div>
             <p class="tool-desc">
-              Developer security CLI for automated vulnerability detection, container scanning, and CI/CD security gating with zero third-party agent overhead.
+              Developer security tool and CLI for automated vulnerability detection, secret leakage scanning, and CI/CD security gating with zero third-party overhead.
             </p>
             <ul class="tool-features">
               <li>Automated dependency vulnerability audits &amp; secret leak detection</li>
               <li>Lightweight pre-commit hooks and GitHub Actions pipeline gates</li>
-              <li>Generates machine-readable SARIF security reports</li>
+              <li>Interactive dashboard with machine-readable SARIF security reports</li>
             </ul>
             <div class="tool-tags">
               <span>Node.js</span><span>Security CLI</span><span>CI/CD</span><span>Vulnerability Scanner</span>
             </div>
             <div class="tool-actions">
               <code class="tool-quick-run">git clone https://github.com/Ritabanm/DevSecops-toolkit</code>
-              <a href="https://github.com/Ritabanm/DevSecops-toolkit" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
-                View Repository &UpperRightArrow;
-              </a>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/DevSecops-toolkit/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/DevSecops-toolkit" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- Tool 3: Hardware-programming-C -->
+          <!-- App 3: texit-pdf -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">Client-Side Systems</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
+                <h3 class="tool-name">texit-pdf: In-Browser Vector PDF Engine</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/texit-pdf" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Fast, privacy-first Markdown editor that compiles and typesets documents into LaTeX-style vector PDFs directly in your browser via WebAssembly with zero server dependencies.
+            </p>
+            <ul class="tool-features">
+              <li>100% in-browser client-side execution with zero data leakage</li>
+              <li>Compiles rich LaTeX mathematical formulas to publication-grade vector output</li>
+              <li>Instant preview rendering eliminating backend render latencies</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>WebAssembly</span><span>LaTeX</span><span>Vector Graphics</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/texit-pdf</code>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/texit-pdf/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/texit-pdf" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 4: NexusCSV -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">Developer Tooling</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
+                <h3 class="tool-name">NexusCSV: CSV to Nested JSON Engine</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/NexusCSV" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Private developer tool that converts flat spreadsheets (CSV) into structured, nested JSON objects in real-time, executing entirely client-side with zero data egress.
+            </p>
+            <ul class="tool-features">
+              <li>Instant real-time schema inferencing and type conversion</li>
+              <li>Multi-level nested JSON hierarchy construction from dot-notation headers</li>
+              <li>100% private in-browser parsing for sensitive datasets</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>CSV Parser</span><span>JSON Schema</span><span>Client-Side</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/NexusCSV</code>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/NexusCSV/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/NexusCSV" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 5: Spectrum -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">Design &amp; Frontend</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
+                <h3 class="tool-name">Spectrum: Color Palette Extractor</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/Spectrum" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Developer productivity tool where users upload an image to extract harmonious color palettes, generate accessible contrast ratios, and copy CSS/Tailwind tokens instantly.
+            </p>
+            <ul class="tool-features">
+              <li>Client-side canvas pixel quantization &amp; clustering algorithms</li>
+              <li>Generates hex, RGB, HSL, and Tailwind CSS variable snippets</li>
+              <li>WCAG 2.1 contrast ratio and accessibility checks</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>Canvas API</span><span>Color Extraction</span><span>UI/UX</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/Spectrum</code>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/Spectrum/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/Spectrum" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 6: Responsive-multiview -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">Developer Tooling</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
+                <h3 class="tool-name">Responsive-multiview</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/Responsive-multiview" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Open source responsive design preview tool allowing developers to simultaneously inspect and interact with websites across mobile, tablet, and desktop viewports.
+            </p>
+            <ul class="tool-features">
+              <li>Synchronized multi-device viewport rendering</li>
+              <li>Custom resolution presets for iPhone, iPad, and desktop viewports</li>
+              <li>Zero-dependency lightweight sandboxed iframe architecture</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>Responsive Design</span><span>Dev Productivity</span><span>Sandboxed Iframe</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/Responsive-multiview</code>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/Responsive-multiview/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/Responsive-multiview" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 7: PolicyBatch -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">Legal &amp; Compliance</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
+                <h3 class="tool-name">PolicyBatch</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/PolicyBatch" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Straightforward, client-side Privacy Policy and legal documents generator for indie developers, mobile applications, and software startups.
+            </p>
+            <ul class="tool-features">
+              <li>Dynamic policy template generator based on data handling selections</li>
+              <li>Instant HTML, Markdown, and plain text exports</li>
+              <li>Zero telemetry and zero tracking</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>Document Engine</span><span>Compliance</span><span>Client-Side</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/PolicyBatch</code>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/PolicyBatch/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/PolicyBatch" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 8: stellar-invoice -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">Finance &amp; Invoicing</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
+                <h3 class="tool-name">stellar-invoice</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/stellar-invoice" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Lightweight, client-side invoice and receipt generator for freelancers, contractors, and service businesses with real-time tax calculation and instant PDF export.
+            </p>
+            <ul class="tool-features">
+              <li>Instant real-time invoice calculation and subtotal computations</li>
+              <li>High-res print-ready PDF invoice generation</li>
+              <li>Local storage persistence with zero account sign-up required</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>PDF Generation</span><span>Invoicing</span><span>Local Storage</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/stellar-invoice</code>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/stellar-invoice/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/stellar-invoice" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- App 9: pomodoro-timer -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.25rem;">
+                  <span class="badge-pill">Developer Productivity</span>
+                  <span class="live-status-pill"><span class="live-dot"></span> Live App</span>
+                </div>
+                <h3 class="tool-name">pomodoro-timer</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/pomodoro-timer" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Developer focus timer with session logs and productivity tracking designed to minimize context switching during deep programming blocks.
+            </p>
+            <ul class="tool-features">
+              <li>Configurable Pomodoro work and rest intervals with audio chimes</li>
+              <li>Detailed session timestamp logging and productivity analytics</li>
+              <li>Lightweight, distraction-free obsidian theme</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>Productivity</span><span>Session Analytics</span><span>Audio API</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/pomodoro-timer</code>
+              <div class="tool-btns">
+                <a href="https://ritabanm.github.io/pomodoro-timer/" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                  🚀 Launch Live App &UpperRightArrow;
+                </a>
+                <a href="https://github.com/Ritabanm/pomodoro-timer" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tool 10: Hardware-programming-C -->
           <div class="tool-card">
             <div class="tool-header">
               <div>
@@ -318,13 +614,15 @@
             </div>
             <div class="tool-actions">
               <code class="tool-quick-run">git clone https://github.com/Ritabanm/Hardware-programming-C</code>
-              <a href="https://github.com/Ritabanm/Hardware-programming-C" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
-                View Repository &UpperRightArrow;
-              </a>
+              <div class="tool-btns">
+                <a href="https://github.com/Ritabanm/Hardware-programming-C" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
             </div>
           </div>
 
-          <!-- Tool 4: OpenAI-Agent-Security -->
+          <!-- Tool 11: OpenAI-Agent-Security -->
           <div class="tool-card">
             <div class="tool-header">
               <div>
@@ -350,45 +648,15 @@
             </div>
             <div class="tool-actions">
               <code class="tool-quick-run">git clone https://github.com/Ritabanm/OpenAI-Agent-Security</code>
-              <a href="https://github.com/Ritabanm/OpenAI-Agent-Security" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
-                View Repository &UpperRightArrow;
-              </a>
-            </div>
-          </div>
-
-          <!-- Tool 5: texit-pdf -->
-          <div class="tool-card">
-            <div class="tool-header">
-              <div>
-                <span class="badge-pill">Client-Side Systems</span>
-                <h3 class="tool-name">texit-pdf: In-Browser Vector PDF Engine</h3>
+              <div class="tool-btns">
+                <a href="https://github.com/Ritabanm/OpenAI-Agent-Security" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
               </div>
-              <a href="https://github.com/Ritabanm/texit-pdf" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
-              </a>
-            </div>
-            <p class="tool-desc">
-              Fast, client-side Markdown to LaTeX vector PDF engine running entirely in the browser via WebAssembly with zero server dependencies.
-            </p>
-            <ul class="tool-features">
-              <li>100% in-browser client-side execution with zero data leakage</li>
-              <li>Compiles rich LaTeX mathematical formulas to publication-grade vector output</li>
-              <li>Instant preview rendering eliminating backend render latencies</li>
-            </ul>
-            <div class="tool-tags">
-              <span>JavaScript</span><span>WebAssembly</span><span>LaTeX</span><span>Vector Graphics</span>
-            </div>
-            <div class="tool-actions">
-              <code class="tool-quick-run">git clone https://github.com/Ritabanm/texit-pdf</code>
-              <a href="https://github.com/Ritabanm/texit-pdf" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
-                View Repository &UpperRightArrow;
-              </a>
             </div>
           </div>
 
-          <!-- Tool 6: meta-vr-dev -->
+          <!-- Tool 12: meta-vr-dev -->
           <div class="tool-card">
             <div class="tool-header">
               <div>
@@ -414,9 +682,11 @@
             </div>
             <div class="tool-actions">
               <code class="tool-quick-run">git clone https://github.com/Ritabanm/meta-vr-dev</code>
-              <a href="https://github.com/Ritabanm/meta-vr-dev" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
-                View Repository &UpperRightArrow;
-              </a>
+              <div class="tool-btns">
+                <a href="https://github.com/Ritabanm/meta-vr-dev" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                  View Repo &UpperRightArrow;
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -532,7 +802,7 @@
   <!-- Toast Notification -->
   <div id="toast" class="toast-popup">Copied!</div>
 
-  <script src="app.js?v=3.2"></script>
+  <script src="app.js?v=3.3"></script>
 </body>
 
 </html>

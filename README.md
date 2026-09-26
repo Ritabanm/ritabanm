@@ -45,17 +45,23 @@
   <img src="https://img.shields.io/badge/Datadog-632CA6?style=flat-square&logo=datadog&logoColor=white" alt="Datadog" />
 </p>
 
-### 🛠️ Featured Open Source Tools & Systems:
+### 🛠️ Featured Open Source Tools & Deployed Apps:
 
-| Project | Description | Stack |
-| :--- | :--- | :--- |
-| [**modern-ai-infra**](https://github.com/Ritabanm/modern-ai-infra) | Distributed scaling harness benchmarking 70B+ LLMs across multi-GPU nodes | `PyTorch` `Triton` `CUDA` |
-| [**adapt-iq**](https://github.com/Ritabanm/adapt-iq) | Cognitive flexibility benchmark for Google DeepMind &times; Kaggle AGI Challenge | `Python` `Benchmark` |
-| [**bridgedata-openvla**](https://github.com/Ritabanm/bridgedata-openvla-generalization) | Generalization & batched inference evaluation for Vision-Language-Action robotics | `Python` `Robotics` `VLA` |
-| [**OpenAI-Agent-Security**](https://github.com/Ritabanm/OpenAI-Agent-Security) | Threat simulation framework and sandboxing for autonomous agent tool loops | `Python` `Sandboxing` `AST` |
-| [**SynthArch-RL**](https://github.com/Ritabanm/SynthArch-RL) | Browser-native Q-Learning agent optimizing system architecture under SLA constraints | `JavaScript` `RL` |
-| [**DevSecops-toolkit**](https://github.com/Ritabanm/DevSecops-toolkit) | Developer security CLI for automated vulnerability detection and CI/CD gating | `Node.js` `Security` |
-| [**Hardware-programming-C**](https://github.com/Ritabanm/Hardware-programming-C) | Bare-metal register-level peripheral drivers for ARM Cortex-M microcontrollers | `C` `Bare-Metal` `ARM` |
+| Project | Description | Live Demo / App | Stack |
+| :--- | :--- | :--- | :--- |
+| [**SynthArch-RL**](https://github.com/Ritabanm/SynthArch-RL) | Browser-native Q-Learning agent optimizing system architecture under SLA constraints | [🚀 **Launch App**](https://ritabanm.github.io/SynthArch-RL/) | `JavaScript` `RL` |
+| [**DevSecops-toolkit**](https://github.com/Ritabanm/DevSecops-toolkit) | Developer security CLI for automated vulnerability detection and CI/CD gating | [🚀 **Launch App**](https://ritabanm.github.io/DevSecops-toolkit/) | `Node.js` `Security` |
+| [**texit-pdf**](https://github.com/Ritabanm/texit-pdf) | Privacy-first Markdown to LaTeX vector PDF typesetting engine in WebAssembly | [🚀 **Launch App**](https://ritabanm.github.io/texit-pdf/) | `JavaScript` `WASM` |
+| [**NexusCSV**](https://github.com/Ritabanm/NexusCSV) | Private in-browser tool transforming flat CSV spreadsheets into nested JSON | [🚀 **Launch App**](https://ritabanm.github.io/NexusCSV/) | `JavaScript` `JSON` |
+| [**Spectrum**](https://github.com/Ritabanm/Spectrum) | Upload images, extract color palettes, and generate CSS/Tailwind tokens | [🚀 **Launch App**](https://ritabanm.github.io/Spectrum/) | `JavaScript` `Canvas` |
+| [**Responsive-multiview**](https://github.com/Ritabanm/Responsive-multiview) | Multi-device viewport responsive design suite for testing web apps simultaneously | [🚀 **Launch App**](https://ritabanm.github.io/Responsive-multiview/) | `JavaScript` `Responsive` |
+| [**PolicyBatch**](https://github.com/Ritabanm/PolicyBatch) | Privacy Policy and legal compliance terms generator for indie developers | [🚀 **Launch App**](https://ritabanm.github.io/PolicyBatch/) | `JavaScript` `Compliance` |
+| [**stellar-invoice**](https://github.com/Ritabanm/stellar-invoice) | Client-side invoice and receipt generator with real-time tax calculation and PDF export | [🚀 **Launch App**](https://ritabanm.github.io/stellar-invoice/) | `JavaScript` `PDF` |
+| [**pomodoro-timer**](https://github.com/Ritabanm/pomodoro-timer) | Focus timer with timestamped session logs and productivity tracking | [🚀 **Launch App**](https://ritabanm.github.io/pomodoro-timer/) | `JavaScript` `Productivity` |
+| [**modern-ai-infra**](https://github.com/Ritabanm/modern-ai-infra) | Distributed scaling harness benchmarking 70B+ LLMs across multi-GPU nodes | [CLI & Harness](https://github.com/Ritabanm/modern-ai-infra) | `PyTorch` `CUDA` |
+| [**adapt-iq**](https://github.com/Ritabanm/adapt-iq) | Cognitive flexibility benchmark for Google DeepMind &times; Kaggle AGI Challenge | [Benchmark](https://github.com/Ritabanm/adapt-iq) | `Python` `Benchmark` |
+| [**OpenAI-Agent-Security**](https://github.com/Ritabanm/OpenAI-Agent-Security) | Threat simulation framework and sandboxing for autonomous agent tool loops | [Sandboxing](https://github.com/Ritabanm/OpenAI-Agent-Security) | `Python` `AST` |
+| [**Hardware-programming-C**](https://github.com/Ritabanm/Hardware-programming-C) | Bare-metal register-level peripheral drivers for ARM Cortex-M microcontrollers | [C Drivers](https://github.com/Ritabanm/Hardware-programming-C) | `C` `Bare-Metal` |
 
 <br/>
 

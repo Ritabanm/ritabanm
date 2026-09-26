@@ -108,6 +108,7 @@ const PROJECTS_DATA = [
       'Real-time cost estimation and latency SLA tradeoff curves'
     ],
     link: 'https://github.com/Ritabanm/SynthArch-RL',
+    liveUrl: 'https://ritabanm.github.io/SynthArch-RL/',
     recommendedFor: ['serving', 'distributed', 'tools'],
     rank: 5
   },
@@ -126,6 +127,7 @@ const PROJECTS_DATA = [
       'Lightweight CLI with zero third-party agent overhead'
     ],
     link: 'https://github.com/Ritabanm/DevSecops-toolkit',
+    liveUrl: 'https://ritabanm.github.io/DevSecops-toolkit/',
     recommendedFor: ['security', 'tools'],
     rank: 6
   },
@@ -180,6 +182,7 @@ const PROJECTS_DATA = [
       'Interactive live document synchronization engine'
     ],
     link: 'https://github.com/Ritabanm/texit-pdf',
+    liveUrl: 'https://ritabanm.github.io/texit-pdf/',
     recommendedFor: ['serving', 'security', 'tools'],
     rank: 9
   },
@@ -364,9 +367,16 @@ function renderProjects() {
             <div class="card-tags">
               ${p.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('')}
             </div>
-            <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="link-tag" style="font-size: 0.78rem;">
-              View &UpperRightArrow;
-            </a>
+            <div style="display: flex; gap: 0.4rem; align-items: center;">
+              ${p.liveUrl ? `
+                <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="link-tag" style="font-size: 0.74rem; background: rgba(6,182,212,0.15); border-color: rgba(6,182,212,0.35); color: var(--cyan);">
+                  🚀 Live App &UpperRightArrow;
+                </a>
+              ` : ''}
+              <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="link-tag" style="font-size: 0.78rem;">
+                Code &UpperRightArrow;
+              </a>
+            </div>
           </div>
         </article>
       `;
@@ -394,9 +404,14 @@ function renderProjects() {
               ${p.tags.map(t => `<span>${escapeHtml(t)}</span>`).join('')}
             </div>
           </div>
-          <div class="list-col-action">
+          <div class="list-col-action" style="display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-end;">
+            ${p.liveUrl ? `
+              <a href="${p.liveUrl}" target="_blank" rel="noopener noreferrer" class="work-card-link" style="font-size: 0.74rem; color: var(--cyan);">
+                🚀 Live App &UpperRightArrow;
+              </a>
+            ` : ''}
             <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="work-card-link" style="font-size: 0.76rem;">
-              Open Project &UpperRightArrow;
+              Code &UpperRightArrow;
             </a>
           </div>
         </div>
@@ -1064,18 +1079,21 @@ function initConsole() {
       switchView('tools');
       return `
 <div class="c-response" style="border-left-color: var(--cyan);">
-  <h4>Open Source Tools &amp; CLIs:</h4>
-  <p>Navigating to the <strong>Open Source Tools</strong> tab. Featured tools &amp; developer systems:</p>
+  <h4>Open Source Tools &amp; Deployed Apps:</h4>
+  <p>Switched to the <strong>Open Source Tools</strong> tab. Here are developer tools &amp; live apps Ritaban built:</p>
   <ul>
-    <li><strong>SynthArch-RL:</strong> Browser-native RL agent for system architecture &amp; SLA optimization.</li>
-    <li><strong>DevSecops-toolkit:</strong> Automated vulnerability scanning CLI &amp; CI/CD security gating.</li>
-    <li><strong>Hardware-programming-C:</strong> Bare-metal ARM Cortex-M peripheral drivers &amp; register suite.</li>
-    <li><strong>OpenAI-Agent-Security:</strong> Threat simulation framework &amp; containment sandbox for agent tool execution.</li>
-    <li><strong>texit-pdf:</strong> High-performance LaTeX to vector PDF engine running in-browser via WebAssembly.</li>
-    <li><strong>meta-vr-dev:</strong> Headless CI testing &amp; spatial computing harness for Meta Quest / VR runtimes.</li>
+    <li><strong>SynthArch-RL:</strong> Browser-native RL system design planner &bull; <a href="https://ritabanm.github.io/SynthArch-RL/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
+    <li><strong>DevSecops-toolkit:</strong> Automated vulnerability &amp; container scanner &bull; <a href="https://ritabanm.github.io/DevSecops-toolkit/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
+    <li><strong>texit-pdf:</strong> In-browser Markdown to LaTeX vector PDF engine &bull; <a href="https://ritabanm.github.io/texit-pdf/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
+    <li><strong>NexusCSV:</strong> Private spreadsheet CSV to nested JSON transformer &bull; <a href="https://ritabanm.github.io/NexusCSV/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
+    <li><strong>Spectrum:</strong> Canvas-based image color palette &amp; CSS extractor &bull; <a href="https://ritabanm.github.io/Spectrum/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
+    <li><strong>Responsive-multiview:</strong> Multi-device viewport responsive design suite &bull; <a href="https://ritabanm.github.io/Responsive-multiview/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
+    <li><strong>PolicyBatch:</strong> Client-side Privacy Policy generator &bull; <a href="https://ritabanm.github.io/PolicyBatch/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
+    <li><strong>stellar-invoice:</strong> Instant client-side invoice and PDF generator &bull; <a href="https://ritabanm.github.io/stellar-invoice/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
+    <li><strong>pomodoro-timer:</strong> Developer focus timer with session analytics &bull; <a href="https://ritabanm.github.io/pomodoro-timer/" target="_blank" style="color:var(--cyan);">Launch App &UpperRightArrow;</a></li>
   </ul>
   <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-    <button class="agent-action-btn" onclick="switchView('tools')">View Tools Tab</button>
+    <button class="agent-action-btn" onclick="switchView('tools')">View Tools Section</button>
   </div>
 </div>`;
     },
