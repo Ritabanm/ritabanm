@@ -1,0 +1,45 @@
+name: Update Contribution Radar
+
+on:
+  schedule:
+    # Run daily at 00:00 UTC to sync commits across all repositories
+    - cron: '0 0 * * *'
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'assets/contribution-radar.svg'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-radar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate Dynamic Contribution Radar
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python .github/scripts/generate_radar.py
+
+      - name: Commit and Push Updated Radar
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add assets/contribution-radar.svg
+          if git diff --staged --quiet; then
+            echo "No changes in contribution radar."
+          else
+            git commit -m "chore: dynamically update contribution radar [skip ci]"
+            git push
+          fi

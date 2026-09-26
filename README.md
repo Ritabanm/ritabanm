@@ -1,15 +1,21 @@
 <h1 align="center">Hi 👋, I'm Ritaban</h1>
 <h3 align="center">Systems for Agentic AI & High-Performance Inference</h3>
 
-- 🔭 I’m currently working on **low-latency agent runtimes and prefix-aware KV caching**
-- ⚡ Researching **multi-turn tool scheduling, distributed inference, and GPU memory hierarchies**
-- 🛡️ Developing benchmarks for **adversarial tool security and cognitive flexibility in frontier models**
+- 🔭 Working on **distributed inference, multi-GPU scaling, and GPU memory hierarchies**
+- ⚡ Benchmarking **communication-compute overlap, 3D parallelism, and custom Triton kernels**
+- 🛡️ Developing benchmarks for **adversarial agent security and cognitive flexibility in frontier models**
 
 ### Connect with me:
 
 <a href="mailto:ritabanmitra709@gmail.com">
   <img src="https://img.shields.io/badge/ritabanmitra709%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </a>
+
+### 📡 Systems & Engineering Contribution Radar (Auto-Updated via Commits):
+
+<p align="center">
+  <img src="assets/contribution-radar.svg" alt="Ritaban's Dynamic Contribution Radar" width="760" />
+</p>
 
 ### Languages and Core Tools:
 

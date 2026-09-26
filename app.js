@@ -22,29 +22,11 @@ function escapeHtml(s) {
    ============================================================================= */
 const PROJECTS_DATA = [
   {
-    id: 'adapt-runtime',
-    title: 'adapt-runtime',
-    role: 'Author & Architect',
-    category: 'systems',
-    badge: 'Flagship System',
-    tags: ['C++', 'Python', 'Prefix Caching', 'Agent Runtimes'],
-    shortDesc: 'AI serving engine built specifically for agentic workloads. Keeps conversation memory intact across external tool pauses so models never re-read history from scratch.',
-    deepDesc: 'Solves the multi-turn agent prefill latency bottleneck. When an agent pauses to run tools (code interpreters, web search), standard engines evict or invalidate KV cache pages. adapt-runtime implements hierarchical radix-tree prefix caching with virtual memory page mapping, cutting Time-To-First-Token (TTFT) by up to 8x on repeated agent turns.',
-    highlights: [
-      'Radix-tree prefix cache reuse (>98% cache hit rate)',
-      'Sub-15ms TTFT resume after multi-second tool calls',
-      'Zero redundant HBM memory re-allocation'
-    ],
-    link: 'https://github.com/Ritabanm/adapt-runtime',
-    recommendedFor: ['serving', 'kernels'],
-    rank: 1
-  },
-  {
     id: 'modern-ai-infra',
     title: 'modern-ai-infra',
     role: 'Author & Systems Engineer',
     category: 'systems',
-    badge: 'Multi-GPU Cluster',
+    badge: 'Flagship Infrastructure',
     tags: ['PyTorch', 'TorchTitan Benchmarking', '3D Parallelism', 'Triton'],
     shortDesc: 'Distributed LLM scaling harness and benchmarks for partitioning 70B+ parameter models across multi-GPU nodes with minimal communication overhead.',
     deepDesc: 'In-depth distributed infrastructure experiments benchmarking upstream TorchTitan and distributed PyTorch configurations. Analyzes communication vs compute overlap (AllReduce vs AllGather), 1F1B pipeline bubble minimization, and custom Triton kernels for fused layer normalization and RoPE across multi-node GPU clusters.',
@@ -55,7 +37,7 @@ const PROJECTS_DATA = [
     ],
     link: 'https://github.com/Ritabanm/modern-ai-infra',
     recommendedFor: ['distributed', 'kernels'],
-    rank: 2
+    rank: 1
   },
   {
     id: 'adapt-iq',
@@ -73,7 +55,7 @@ const PROJECTS_DATA = [
     ],
     link: 'https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/adapt-iq-measuring-ai-cognitive-flexibility',
     recommendedFor: ['security', 'serving'],
-    rank: 3
+    rank: 2
   },
   {
     id: 'bridgedata-openvla',
@@ -91,7 +73,7 @@ const PROJECTS_DATA = [
     ],
     link: 'https://github.com/Ritabanm/bridgedata-openvla-generalization',
     recommendedFor: ['serving', 'distributed'],
-    rank: 4
+    rank: 3
   },
   {
     id: 'agent-security',
@@ -109,6 +91,24 @@ const PROJECTS_DATA = [
     ],
     link: 'https://github.com/Ritabanm/OpenAI-Agent-Security',
     recommendedFor: ['security'],
+    rank: 4
+  },
+  {
+    id: 'syntharch-rl',
+    title: 'SynthArch: RL System Design Planner',
+    role: 'Author & Architect',
+    category: 'systems',
+    badge: 'RL & System Architecture',
+    tags: ['JavaScript', 'Q-Learning', 'System Design', 'Browser-Native'],
+    shortDesc: 'Interactive browser-native systems design planner that trains a Q-Learning reinforcement learning agent in real time to optimize architecture layouts under SLA and cost constraints.',
+    deepDesc: 'Models distributed system design as a Markov Decision Process (MDP). A client-side Q-Learning agent explores state spaces (database sharding, caching tiers, load balancers, messaging queues) to converge on cost-optimal architectures that meet target latency SLAs without server compute overhead.',
+    highlights: [
+      'Client-side browser-native Q-Learning engine',
+      'Markov Decision Process formulation for distributed architectures',
+      'Real-time cost estimation and latency SLA tradeoff curves'
+    ],
+    link: 'https://github.com/Ritabanm/SynthArch-RL',
+    recommendedFor: ['serving', 'distributed'],
     rank: 5
   },
   {
@@ -557,22 +557,22 @@ function initSystemsAgent() {
     // 1. Low-latency Serving / KV Cache / Memory
     if (q.includes('serving') || q.includes('latency') || q.includes('cache') || q.includes('ttft') || q.includes('memory') || q.includes('vllm') || q.includes('robot') || q.includes('openvla')) {
       return {
-        html: `For <strong>low-latency serving &amp; inference memory optimization</strong>, Ritaban's core original systems are:<br><br>
-               1. <strong>adapt-runtime:</strong> AI serving engine with radix-tree prefix caching across external tool pauses.<br>
+        html: `For <strong>low-latency serving, robotics &amp; architecture optimization</strong>, Ritaban's core original systems are:<br><br>
+               1. <strong>modern-ai-infra:</strong> Distributed scaling harness benchmarking 70B+ LLMs across multi-GPU setups.<br>
                2. <strong>bridgedata-openvla-generalization:</strong> Batched evaluation and low-latency inference profiling for Vision-Language-Action (VLA) robotics.<br>
-               3. <strong>texit-pdf:</strong> High-performance in-memory client-side vector compilation engine.`,
+               3. <strong>SynthArch-RL:</strong> Browser-native Reinforcement Learning system design planner optimizing architecture and SLAs.`,
         actions: [
           {
-            label: '⚡ Show Fast Serving Projects',
+            label: '⚡ Show Serving & Architecture',
             onClick: () => {
               switchView('work');
               applyProjectFilters({ recommendation: 'serving', count: 5 });
             }
           },
           {
-            label: 'View adapt-runtime Code',
+            label: 'View modern-ai-infra Code',
             onClick: () => {
-              window.open('https://github.com/Ritabanm/adapt-runtime', '_blank');
+              window.open('https://github.com/Ritabanm/modern-ai-infra', '_blank');
             }
           },
           {
@@ -663,9 +663,9 @@ function initSystemsAgent() {
     if (q.includes('top 3') || q.includes('top three') || q.includes('best 3') || q.includes('core 3')) {
       return {
         html: `Ritaban's <strong>Top 3 Core Systems Projects</strong> are:<br><br>
-               1. <strong>adapt-runtime</strong> &mdash; Low-latency AI serving engine with radix-tree prefix caching for agent runtimes.<br>
-               2. <strong>modern-ai-infra</strong> &mdash; Distributed LLM scaling harness with custom Triton kernels on multi-GPU clusters.<br>
-               3. <strong>ADAPT-IQ</strong> &mdash; Cognitive flexibility benchmark for the Google DeepMind &times; Kaggle AGI challenge.`,
+               1. <strong>modern-ai-infra</strong> &mdash; Distributed LLM scaling harness with custom Triton kernels on multi-GPU clusters.<br>
+               2. <strong>ADAPT-IQ</strong> &mdash; Cognitive flexibility benchmark for the Google DeepMind &times; Kaggle AGI challenge.<br>
+               3. <strong>bridgedata-openvla-generalization</strong> &mdash; Generalization &amp; low-latency inference evaluation harness for Vision-Language-Action robotics.`,
         actions: [
           {
             label: 'Switch View to Top 3',
@@ -1023,6 +1023,7 @@ function initConsole() {
     <li><code>now</code> &mdash; What I am building and scaling right now (2026)</li>
     <li><code>projects [3|5|10]</code> &mdash; Summary of my core systems projects (toggle Top 3, 5, or 10)</li>
     <li><code>agent</code> &mdash; Open interactive Systems Agent chatbot assistant</li>
+    <li><code>radar</code> &mdash; View dynamic contribution radar chart</li>
     <li><code>rec</code> &mdash; Get project recommendations by systems interest</li>
     <li><code>whoami</code> &mdash; My background, credentials &amp; contact</li>
     <li><code>stack</code> &mdash; The languages &amp; systems tools I write code in</li>
@@ -1058,10 +1059,10 @@ function initConsole() {
 <div class="c-response" style="border-left-color: var(--cyan);">
   <h4>System Recommendations By Specialty:</h4>
   <ul>
-    <li><strong>⚡ Fast AI Serving &amp; Memory Caching:</strong> adapt-runtime, bridgedata-openvla-generalization</li>
+    <li><strong>⚡ Fast AI Serving &amp; Architecture:</strong> bridgedata-openvla-generalization, SynthArch-RL, texit-pdf</li>
     <li><strong>🌐 Multi-GPU &amp; 3D Parallelism:</strong> modern-ai-infra, Swift Concurrency Suite</li>
     <li><strong>🛡️ Security &amp; Benchmarks:</strong> ADAPT-IQ (DeepMind/Kaggle), OpenAI-Agent-Security, DevSecops-toolkit</li>
-    <li><strong>💻 Low-Level Hardware &amp; Kernels:</strong> ARM Cortex-M Hardware-C, modern-ai-infra (Triton/CUDA)</li>
+    <li><strong>💻 Low-Level Hardware &amp; Kernels:</strong> ARM Cortex-M Hardware-C, modern-ai-infra (Triton/CUDA), meta-vr-dev</li>
   </ul>
   <p style="margin-top: 0.5rem;">Click the <strong>Work &amp; Code</strong> tab or ask the <strong>Systems Agent</strong> to explore!</p>
 </div>`,
@@ -1070,9 +1071,9 @@ function initConsole() {
 <div class="c-response">
   <h4>What I'm Working On Right Now (2026):</h4>
   <ul>
-    <li><strong>adapt-runtime:</strong> Building an AI serving engine that retains context across tool pauses, avoiding context eviction and redundant prefill overhead.</li>
     <li><strong>modern-ai-infra:</strong> Benchmarking 3D parallelism and communication overlap with custom Triton kernels on modern GPU clusters.</li>
     <li><strong>Robotics &amp; VLA Generalization:</strong> Profiling and benchmarking zero-shot generalization and batched inference for Vision-Language-Action policies.</li>
+    <li><strong>SynthArch-RL:</strong> Developing client-side reinforcement learning models for automated system architecture design.</li>
   </ul>
 </div>`,
 
@@ -1131,12 +1132,19 @@ function initConsole() {
   </div>
 </div>`,
 
+    radar: () => `
+<div class="c-response" style="border-left-color: var(--cyan); text-align: center;">
+  <h4>📡 Systems &amp; Engineering Contribution Radar (Live Telemetry):</h4>
+  <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom: 0.75rem;">Dynamically aggregated across recent GitHub commits, PRs &amp; repositories.</p>
+  <img src="assets/contribution-radar.svg" alt="Systems Contribution Radar" style="max-width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
+</div>`,
+
     benchmarks: () => `
 <div class="c-response" style="border-left-color: var(--green);">
   <h4>Running Synthetic Benchmark: LLaMA-3-70B on 4x H100 GPUs</h4>
   <p style="font-family: var(--font-mono); font-size: 0.82rem; color: #10b981;">
     [0.00s] 16 Agent Streams started with 2,048 shared prompt tokens.<br>
-    [0.04s] adapt-runtime tree cache hit: 99.2% reuse.<br>
+    [0.04s] Hierarchical radix tree cache hit: 99.2% reuse.<br>
     [0.09s] Tool dispatched. Other decoding batches processed.<br>
     [0.14s] Response resumed: <strong>TTFT = 14.1 ms</strong> (vs 112.4 ms naive).<br>
     &bull; <strong>Speedup: 7.97x faster</strong><br>
