@@ -4,10 +4,7 @@
 ### AI Systems & Infrastructure Engineer | Agentic Runtimes | Applied ML Researcher
 **📍 New York City**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com)
-[![Twitter/X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com)
-[![Website](https://img.shields.io/badge/Website-4A154B?style=for-the-badge&logo=google-chrome&logoColor=white)](https://github.com/Ritabanm)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:contact@example.com)
+[![Email](https://img.shields.io/badge/Email-ritabanmitra709%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ritabanmitra709@gmail.com)
 
 ---
 
