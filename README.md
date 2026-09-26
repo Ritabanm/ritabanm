@@ -1,58 +1,88 @@
 <div align="center">
 
-# Hi, I'm Ritaban Mitra 👋
-### AI Systems & Infrastructure Engineer | Agentic Runtimes | Applied ML Researcher
-**📍 New York City**
+# Ritaban Mitra
+### Systems for Agentic AI & High-Performance Inference
+**New York City**
 
 <br/>
 
 <a href="mailto:ritabanmitra709@gmail.com">
-  <img src="https://img.shields.io/badge/Email-ritabanmitra709%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ritaban" />
+  <img src="https://img.shields.io/badge/ritabanmitra709%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ritaban Mitra" />
 </a>
 
-<br/>
+<br/><br/>
 
-📧 **<a href="mailto:ritabanmitra709@gmail.com">ritabanmitra709@gmail.com</a>**
-
----
-
-> *Building high-throughput LLM serving infrastructure, low-latency agent runtimes, and cognitive/adversarial evaluation benchmarks for frontier AI systems.*
+> *Designing low-latency serving runtimes, prefix-aware memory management, and adversarial robustness harnesses for multi-turn, tool-augmented compound AI systems.*
 
 </div>
 
 ---
 
-### 🔬 Core Focus Areas
+### 🧠 The Engineering Focus
 
-- ⚡ **AI Infrastructure & Serving:** High-throughput inference, prefix-aware KV caching, kernel optimization, and distributed serving (`vLLM`, `TensorRT-LLM`, `CUTLASS`, `MLX`, `PyTorch`).
-- 🤖 **Agent Runtimes & Orchestration:** Execution policies, tool-interrupted agent graphs, stateful routing, and multi-turn efficiency.
-- 🛡️ **AI Safety & Adversarial Benchmarking:** Cognitive flexibility benchmarks and multi-step tool attack defense (Google DeepMind / Kaggle AGI Hackathon & OpenAI / IEEE Agent Security).
-- 🦾 **Embodied AI & Robotics:** Generalization in OpenVLA models and reinforcement learning agents.
+Current inference engines are optimized for single-shot, static batching. **Agentic workloads break these assumptions**—they are multi-turn, stateful, interrupted by asynchronous tool invocations, and memory-constrained by exploding context windows. 
 
----
+My work sits at the intersection of **the inference layer and agent runtime orchestration**:
 
-### 🚀 Highlighted Projects
-
-| Project | Description | Stack |
-| :--- | :--- | :--- |
-| [**adapt-runtime**](https://github.com/Ritabanm/adapt-runtime) | Policy-driven execution runtime & prefix-aware serving layer for multi-round, tool-interrupted agentic LLM workloads. | `Python` `AsyncIO` `LLM Serving` |
-| [**adapt-iq**](https://github.com/Ritabanm/adapt-iq) | Context-Injection Creativity Test benchmark measuring cognitive flexibility in frontier models (Google DeepMind x Kaggle AGI Hackathon). | `Python` `Evaluation` `Frontier AI` |
-| [**modern-ai-infra**](https://github.com/Ritabanm/modern-ai-infra) | Systems research and tooling for LLM serving, distributed training, GPU kernels, and AI networking. | `Python` `C++` `CUDA` `Distributed` |
-| [**OpenAI-Agent-Security**](https://github.com/Ritabanm/OpenAI-Agent-Security) | High-throughput adversarial multi-step tool attack and defense algorithms (OpenAI / Google / IEEE competition). | `Python` `Agent Security` `Jupyter` |
-| [**texit-pdf**](https://github.com/Ritabanm/texit-pdf) | Local, privacy-first in-browser Markdown editor that compiles and typesets directly into LaTeX-style vector PDFs. | `JavaScript` `Typesetting` `PDF` |
+* **Prefix-Aware KV Management & Dynamic Scheduling:** Mitigating KV cache churn during tool interrupts; optimizing multi-turn agent sessions through structured prompt reuse, prefix preservation, and stateful routing.
+* **Low-Latency Agent Execution Engines:** Closing the gap between model execution and external tool dispatch, eliminating IO stalls in multi-agent loops.
+* **Frontier Evaluation & Adversarial Hardening:** Rigorous stress-testing of autonomous agents against multi-step tool injection, state corruption, and out-of-distribution cognitive shifts.
+* **GPU & Systems Kernel Profiling:** Analyzing latency bottlenecks across heterogeneous memory hierarchies (CUDA, Metal/MLX, PyTorch internals).
 
 ---
 
-### 🛠️ Tech Stack & Systems Expertise
+### ⚡ Selected Systems & Research Projects
 
-- **Languages:** `Python`, `C++`, `CUDA`, `JavaScript / TypeScript`, `Go`, `SQL`
-- **ML & Serving Frameworks:** `PyTorch`, `TensorRT-LLM`, `vLLM`, `MLX`, `Faiss`, `DeepSpeed`, `TorchTitan`
-- **Systems & Cloud Infrastructure:** `Kubernetes`, `Docker`, `Linux / POSIX`, `GPU Profiling`, `Datadog`
-- **Developer Tools & Environments:** `Git`, `CI/CD (DevSecOps)`, `Jupyter`, `Node.js`
+#### 🛠️ [adapt-runtime](https://github.com/Ritabanm/adapt-runtime)
+**Policy-Driven Execution Runtime & Prefix-Aware Serving Layer for Agentic Workloads**
+* Architected a specialized serving runtime designed specifically for tool-interrupted, multi-round agent interactions.
+* Implements prefix-aware request scheduling to maximize KV cache hit rates across iterative tool-calling sequences.
+* Reduces execution latency by decoupling model generation states from asynchronous external IO routines.
+* *Stack:* `Python`, `AsyncIO`, `vLLM/Serving Architectures`, `Systems Design`
+
+#### 🔬 [adapt-iq](https://github.com/Ritabanm/adapt-iq)
+**Cognitive Flexibility & Context-Injection Benchmark for Frontier Models**
+* Developed an automated evaluation framework to measure cognitive adaptability and multi-step reasoning shifts in frontier AI systems under rapid context modification.
+* Submitted to the **Google DeepMind x Kaggle AGI Hackathon**.
+* *Stack:* `Python`, `Frontier AI Evaluation`, `LLM Benchmarking`
+
+#### 🖥️ [modern-ai-infra](https://github.com/Ritabanm/modern-ai-infra)
+**Systems Research: Distributed Training, GPU Kernels, and AI Networking**
+* Reproducible systems benchmarks and implementation patterns covering distributed communication primitives, memory-efficient attention mechanisms, and throughput optimization across modern accelerators.
+* *Stack:* `Python`, `C++`, `CUDA`, `PyTorch Internals`, `Distributed Systems`
+
+#### 🛡️ [OpenAI-Agent-Security](https://github.com/Ritabanm/OpenAI-Agent-Security)
+**High-Throughput Adversarial Search & Multi-Step Tool Attack Defense**
+* Engineered high-throughput adversarial candidate filtering for multi-step tool vulnerabilities in autonomous agents.
+* Submission for the **OpenAI / Google / IEEE AI Agent Security** initiative.
+* *Stack:* `Python`, `Adversarial Search`, `Agent Safety`, `Tool-Use Security`
 
 ---
 
-### 📊 GitHub Activity & Stats
+### 🧰 Technical Arsenal
+
+<table>
+  <tr>
+    <td width="25%"><strong>Compute & Languages</strong></td>
+    <td><code>C++</code> <b>·</b> <code>CUDA</code> <b>·</b> <code>Python</code> <b>·</b> <code>JavaScript / TypeScript</code> <b>·</b> <code>POSIX C</code></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>Serving & Kernels</strong></td>
+    <td><code>vLLM</code> <b>·</b> <code>TensorRT-LLM</code> <b>·</b> <code>PyTorch (Core &amp; Dispatch)</code> <b>·</b> <code>CUTLASS</code> <b>·</b> <code>MLX</code> <b>·</b> <code>Faiss</code></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>Distributed & Scale</strong></td>
+    <td><code>Distributed Training (DDP/FSDP)</code> <b>·</b> <code>TorchTitan</code> <b>·</b> <code>DeepSpeed</code> <b>·</b> <code>Kubernetes</code> <b>·</b> <code>Docker</code></td>
+  </tr>
+  <tr>
+    <td width="25%"><strong>Systems Architecture</strong></td>
+    <td><code>KV Cache Optimization</code> <b>·</b> <code>Prefix Caching</code> <b>·</b> <code>Asynchronous Runtimes</code> <b>·</b> <code>Agent Tool Security</code></td>
+  </tr>
+</table>
+
+---
+
+### 📈 Telemetry & Contributions
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Ritabanm&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Ritaban's GitHub stats" height="165" />
@@ -68,7 +98,5 @@
 ---
 
 <div align="center">
-
-💬 *Always open to discussions on LLM inference optimizations, distributed systems, and agent security.*
-
+  <sub>Open to deep technical discussions on inference engine internals, agent runtime overhead, and systems-level safety.</sub>
 </div>
