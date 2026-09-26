@@ -15,7 +15,7 @@
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,cpp,c,pytorch,kubernetes,docker,linux,git,js,ts" alt="Languages and Tools" />
+    <img src="https://skillicons.dev/icons?i=python,cpp,c,pytorch,kubernetes,docker,linux,git,js,ts, swift, mlx, datadog, ollama, vllm, mistral, nvidia" alt="Languages and Tools" />
   </a>
 </p>
 
