@@ -146,11 +146,11 @@ def compute_scores(events, repos):
 
 
 def generate_svg(scores, commit_counts, repo_counts):
-    width = 760
-    height = 510
-    cx = 380
-    cy = 250
-    radius = 135
+    width = 680
+    height = 400
+    cx = 340
+    cy = 205
+    radius = 125
 
     num_axes = len(CATEGORIES)
     # Start top at 90 deg (pi/2) and rotate clockwise
@@ -165,14 +165,14 @@ def generate_svg(scores, commit_counts, repo_counts):
             x = cx + r * math.cos(a)
             y = cy - r * math.sin(a)
             pts.append(f"{x:.1f},{y:.1f}")
-        rings_svg.append(f'<polygon points="{" ".join(pts)}" fill="none" stroke="#1e293b" stroke-width="1.2" stroke-dasharray="{"3,3" if level < 1.0 else "none"}" opacity="0.8"/>')
+        rings_svg.append(f'<polygon points="{" ".join(pts)}" fill="none" stroke="#1e293b" stroke-width="1.2" stroke-dasharray="{"3,3" if level < 1.0 else "none"}" opacity="0.85"/>')
 
     # Radial axis lines
     axes_svg = []
     for a in angles:
         x2 = cx + radius * math.cos(a)
         y2 = cy - radius * math.sin(a)
-        axes_svg.append(f'<line x1="{cx}" y1="{cy}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="#334155" stroke-width="1.3" opacity="0.6"/>')
+        axes_svg.append(f'<line x1="{cx}" y1="{cy}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="#334155" stroke-width="1.2" opacity="0.6"/>')
 
     # Data polygon points
     data_pts = []
@@ -186,7 +186,7 @@ def generate_svg(scores, commit_counts, repo_counts):
         x = cx + r * math.cos(a)
         y = cy - r * math.sin(a)
         data_pts.append(f"{x:.1f},{y:.1f}")
-        dot_nodes.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.5" fill="#38bdf8" stroke="#0f172a" stroke-width="2"/>')
+        dot_nodes.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#38bdf8" stroke="#0b1120" stroke-width="2"/>')
 
     data_polygon = " ".join(data_pts)
 
@@ -196,7 +196,7 @@ def generate_svg(scores, commit_counts, repo_counts):
         cid = cat["id"]
         score = scores[cid]
         a = angles[i]
-        label_r = radius + 34
+        label_r = radius + 28
         lx = cx + label_r * math.cos(a)
         ly = cy - label_r * math.sin(a)
 
@@ -206,46 +206,43 @@ def generate_svg(scores, commit_counts, repo_counts):
             if math.sin(a) > 0:
                 ly -= 6
             else:
-                ly += 16
+                ly += 14
         elif math.cos(a) > 0:
             anchor = "start"
-            lx += 8
+            lx += 6
         else:
             anchor = "end"
-            lx -= 8
+            lx -= 6
 
         labels_svg.append(f'''
         <g transform="translate({lx:.1f}, {ly:.1f})">
-          <text text-anchor="{anchor}" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-weight="700" font-size="12.5" fill="#f1f5f9">
+          <text text-anchor="{anchor}" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-weight="700" font-size="12" fill="#f1f5f9">
             {cat["icon"]} {cat["label"]}
           </text>
-          <text text-anchor="{anchor}" dy="14" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#38bdf8" font-weight="600">
-            {score}% capability index
+          <text text-anchor="{anchor}" dy="13" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#38bdf8" font-weight="600">
+            {score}%
           </text>
         </g>
         ''')
-
-    now_utc = datetime.now(timezone.utc).strftime("%b %d, %Y")
 
     svg_content = f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0" y1="0" x2="{width}" y2="{height}" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#070a11"/>
-      <stop offset="50%" stop-color="#0d1424"/>
-      <stop offset="100%" stop-color="#080c16"/>
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="100%" stop-color="#0b1324"/>
     </linearGradient>
 
     <!-- Radar Area Gradient -->
     <linearGradient id="radarFill" x1="{cx - radius}" y1="{cy - radius}" x2="{cx + radius}" y2="{cy + radius}" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.50"/>
-      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.45"/>
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.40"/>
     </linearGradient>
 
     <!-- Subtle Glow Filter -->
     <filter id="radarGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -253,39 +250,13 @@ def generate_svg(scores, commit_counts, repo_counts):
     </filter>
   </defs>
 
-  <style>
-    @keyframes pulse {{
-      0% {{ opacity: 0.6; transform: scale(0.98); }}
-      50% {{ opacity: 1; transform: scale(1.02); }}
-      100% {{ opacity: 0.6; transform: scale(0.98); }}
-    }}
-    .glow-dot {{
-      animation: pulse 2.4s infinite ease-in-out;
-    }}
-  </style>
-
   <!-- Container Box -->
-  <rect x="2" y="2" width="{width - 4}" height="{height - 4}" rx="18" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect x="2" y="2" width="{width - 4}" height="{height - 4}" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.2"/>
 
-  <!-- Top Decorative Header Bar -->
-  <g transform="translate(32, 28)">
-    <circle cx="6" cy="6" r="4" fill="#10b981" class="glow-dot"/>
-    <text x="18" y="10" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" fill="#10b981" letter-spacing="1">LIVE TELEMETRY // COMMIT-WEIGHTED RADAR</text>
-    <text x="0" y="34" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="19" font-weight="800" fill="#f8fafc">
-      Systems &amp; Engineering Contribution Focus
-    </text>
-    <text x="0" y="52" font-family="Plus Jakarta Sans, -apple-system, sans-serif" font-size="11.5" fill="#94a3b8">
-      Dynamically aggregated across multi-GPU scaling, low-level kernels, robotics, and security codebases
-    </text>
-  </g>
-
-  <!-- Timestamp Badge -->
-  <g transform="translate({width - 155}, 28)">
-    <rect width="125" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <text x="62" y="16" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#38bdf8" font-weight="600">
-      ⚡ {now_utc}
-    </text>
-  </g>
+  <!-- Simple Header -->
+  <text x="{cx}" y="32" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="700" fill="#94a3b8" letter-spacing="1.5">
+    CONTRIBUTION FOCUS
+  </text>
 
   <!-- Grid Rings & Radial Axes -->
   <g>
@@ -294,7 +265,7 @@ def generate_svg(scores, commit_counts, repo_counts):
   </g>
 
   <!-- Radar Area -->
-  <polygon points="{data_polygon}" fill="url(#radarFill)" stroke="#00f5ff" stroke-width="2.4" filter="url(#radarGlow)"/>
+  <polygon points="{data_polygon}" fill="url(#radarFill)" stroke="#00f5ff" stroke-width="2.2" filter="url(#radarGlow)"/>
 
   <!-- Node Dots -->
   <g>
@@ -304,13 +275,6 @@ def generate_svg(scores, commit_counts, repo_counts):
   <!-- Axis Category Labels -->
   <g>
     {''.join(labels_svg)}
-  </g>
-
-  <!-- Bottom Mini Legend -->
-  <g transform="translate(32, {height - 24})">
-    <text x="0" y="0" font-family="JetBrains Mono, monospace" font-size="10" fill="#64748b">
-      ● Metrics automatically synchronized via GitHub Actions on recent push events &bull; Excludes under-review work
-    </text>
   </g>
 </svg>
 '''

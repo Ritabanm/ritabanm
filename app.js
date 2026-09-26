@@ -1134,9 +1134,9 @@ function initConsole() {
 
     radar: () => `
 <div class="c-response" style="border-left-color: var(--cyan); text-align: center;">
-  <h4>📡 Systems &amp; Engineering Contribution Radar (Live Telemetry):</h4>
+  <h4>Contribution Focus:</h4>
   <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom: 0.75rem;">Dynamically aggregated across recent GitHub commits, PRs &amp; repositories.</p>
-  <img src="assets/contribution-radar.svg" alt="Systems Contribution Radar" style="max-width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
+  <img src="assets/contribution-radar.svg" alt="Contribution Focus" style="max-width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: 0 8px 24px rgba(0,0,0,0.4);" />
 </div>`,
 
     benchmarks: () => `
