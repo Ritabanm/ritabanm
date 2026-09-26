@@ -239,15 +239,6 @@ def generate_svg(scores, commit_counts, repo_counts):
       <stop offset="50%" stop-color="#3b82f6" stop-opacity="0.30"/>
       <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.40"/>
     </linearGradient>
-
-    <!-- Subtle Glow Filter -->
-    <filter id="radarGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
   <!-- Container Box -->
@@ -265,7 +256,7 @@ def generate_svg(scores, commit_counts, repo_counts):
   </g>
 
   <!-- Radar Area -->
-  <polygon points="{data_polygon}" fill="url(#radarFill)" stroke="#00f5ff" stroke-width="2.2" filter="url(#radarGlow)"/>
+  <polygon points="{data_polygon}" fill="url(#radarFill)" stroke="#00f5ff" stroke-width="2.2"/>
 
   <!-- Node Dots -->
   <g>

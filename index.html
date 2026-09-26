@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=2.8">
+  <link rel="stylesheet" href="style.css?v=3.2">
 </head>
 
 <body>
@@ -37,6 +37,7 @@
       <nav class="nav-tabs">
         <button class="tab-btn active" data-view="console">Console</button>
         <button class="tab-btn" data-view="work">Work &amp; Code</button>
+        <button class="tab-btn" data-view="tools">Open Source Tools</button>
         <button class="tab-btn" data-view="contact">Contact</button>
       </nav>
 
@@ -94,6 +95,7 @@
             <span class="chips-label">TAP TO RUN:</span>
             <button class="chip" data-cmd="now">now</button>
             <button class="chip" data-cmd="projects">projects</button>
+            <button class="chip" data-cmd="tools">tools</button>
             <button class="chip" data-cmd="agent">agent</button>
             <button class="chip" data-cmd="radar">radar</button>
             <button class="chip" data-cmd="benchmarks">benchmarks</button>
@@ -147,6 +149,7 @@
             <span class="deck-label">RECOMMEND BY DOMAIN:</span>
             <div class="rec-chips" id="recommend-chips">
               <button class="rec-chip active" data-rec="all">All Specialties</button>
+              <button class="rec-chip" data-rec="tools">🛠️ Developer Tools &amp; CLIs</button>
               <button class="rec-chip" data-rec="serving">⚡ Fast AI Serving &amp; Caching</button>
               <button class="rec-chip" data-rec="distributed">🌐 Multi-GPU &amp; 3D Parallelism</button>
               <button class="rec-chip" data-rec="security">🛡️ Security &amp; Benchmarks</button>
@@ -209,6 +212,219 @@
           <a href="https://github.com/Ritabanm?tab=repositories" target="_blank" rel="noopener noreferrer"
             class="link-tag">
             View All Repositories on GitHub &UpperRightArrow;
+          </a>
+        </div>
+      </section>
+
+      <!-- VIEW 3: OPEN SOURCE TOOLS (Modular Utilities, CLIs, Libraries) -->
+      <section id="view-tools" class="tab-pane">
+        <div class="section-hero" style="margin-bottom: 1.5rem;">
+          <h2 class="section-title" style="font-size: 1.75rem; font-weight: 800; color: var(--text-white);">
+            Open Source Tools &amp; Libraries
+          </h2>
+          <p class="section-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem; max-width: 680px;">
+            Modular developer CLIs, system architecture planners, security scanners, and bare-metal embedded libraries built for real workloads.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+          <!-- Tool 1: SynthArch-RL -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <span class="badge-pill">RL &amp; System Architecture</span>
+                <h3 class="tool-name">SynthArch: RL System Design Planner</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/SynthArch-RL" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Interactive browser-native systems design planner that trains a Q-Learning reinforcement learning agent directly in client JavaScript to optimize architecture layouts under SLA and cost constraints.
+            </p>
+            <ul class="tool-features">
+              <li>Markov Decision Process (MDP) for cloud architecture tiers</li>
+              <li>Real-time client-side Q-Learning convergence without server cost</li>
+              <li>Multi-variable SLA latency vs infrastructure hosting tradeoff curves</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>Q-Learning</span><span>System Design</span><span>Browser-Native</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/SynthArch-RL</code>
+              <a href="https://github.com/Ritabanm/SynthArch-RL" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
+                View Repository &UpperRightArrow;
+              </a>
+            </div>
+          </div>
+
+          <!-- Tool 2: DevSecops-toolkit -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <span class="badge-pill">DevSecOps &amp; Tooling</span>
+                <h3 class="tool-name">DevSecops-toolkit</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/DevSecops-toolkit" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Developer security CLI for automated vulnerability detection, container scanning, and CI/CD security gating with zero third-party agent overhead.
+            </p>
+            <ul class="tool-features">
+              <li>Automated dependency vulnerability audits &amp; secret leak detection</li>
+              <li>Lightweight pre-commit hooks and GitHub Actions pipeline gates</li>
+              <li>Generates machine-readable SARIF security reports</li>
+            </ul>
+            <div class="tool-tags">
+              <span>Node.js</span><span>Security CLI</span><span>CI/CD</span><span>Vulnerability Scanner</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/DevSecops-toolkit</code>
+              <a href="https://github.com/Ritabanm/DevSecops-toolkit" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
+                View Repository &UpperRightArrow;
+              </a>
+            </div>
+          </div>
+
+          <!-- Tool 3: Hardware-programming-C -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <span class="badge-pill">Computer Architecture</span>
+                <h3 class="tool-name">ARM Cortex-M Hardware Driver Library in C</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/Hardware-programming-C" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Bare-metal modular C driver library targeting ARM Cortex-M microcontrollers with register-level memory mapping and peripheral drivers.
+            </p>
+            <ul class="tool-features">
+              <li>Register-level memory-mapped I/O (GPIO, UART, SPI, Timers, DMA)</li>
+              <li>Deterministic execution cycles without heavy vendor HAL overhead</li>
+              <li>Zero-copy interrupt service routine (ISR) handlers</li>
+            </ul>
+            <div class="tool-tags">
+              <span>C</span><span>ARM Cortex-M</span><span>Bare-Metal</span><span>Memory-Mapped I/O</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/Hardware-programming-C</code>
+              <a href="https://github.com/Ritabanm/Hardware-programming-C" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
+                View Repository &UpperRightArrow;
+              </a>
+            </div>
+          </div>
+
+          <!-- Tool 4: OpenAI-Agent-Security -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <span class="badge-pill">Security Sandboxing</span>
+                <h3 class="tool-name">OpenAI-Agent-Security</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/OpenAI-Agent-Security" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Threat simulation framework and automatic containment sandbox for autonomous agents running recursive multi-step tool calls.
+            </p>
+            <ul class="tool-features">
+              <li>Simulates recursive multi-step tool escalation attacks</li>
+              <li>Lightweight runtime isolation sandboxes for external shell commands</li>
+              <li>Dynamic AST analysis preventing indirect prompt injection payload execution</li>
+            </ul>
+            <div class="tool-tags">
+              <span>Python</span><span>Sandboxing</span><span>Agent Defenses</span><span>AST Analysis</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/OpenAI-Agent-Security</code>
+              <a href="https://github.com/Ritabanm/OpenAI-Agent-Security" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
+                View Repository &UpperRightArrow;
+              </a>
+            </div>
+          </div>
+
+          <!-- Tool 5: texit-pdf -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <span class="badge-pill">Client-Side Systems</span>
+                <h3 class="tool-name">texit-pdf: In-Browser Vector PDF Engine</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/texit-pdf" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              Fast, client-side Markdown to LaTeX vector PDF engine running entirely in the browser via WebAssembly with zero server dependencies.
+            </p>
+            <ul class="tool-features">
+              <li>100% in-browser client-side execution with zero data leakage</li>
+              <li>Compiles rich LaTeX mathematical formulas to publication-grade vector output</li>
+              <li>Instant preview rendering eliminating backend render latencies</li>
+            </ul>
+            <div class="tool-tags">
+              <span>JavaScript</span><span>WebAssembly</span><span>LaTeX</span><span>Vector Graphics</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/texit-pdf</code>
+              <a href="https://github.com/Ritabanm/texit-pdf" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
+                View Repository &UpperRightArrow;
+              </a>
+            </div>
+          </div>
+
+          <!-- Tool 6: meta-vr-dev -->
+          <div class="tool-card">
+            <div class="tool-header">
+              <div>
+                <span class="badge-pill">Spatial Computing</span>
+                <h3 class="tool-name">meta-vr-dev: WebXR Framework</h3>
+              </div>
+              <a href="https://github.com/Ritabanm/meta-vr-dev" target="_blank" rel="noopener noreferrer" class="tool-gh-link" title="GitHub Repository">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+            <p class="tool-desc">
+              High-performance WebXR spatial computing framework targeting Meta Quest 3 and Horizon OS using Three.js and real-time graphics pipelines.
+            </p>
+            <ul class="tool-features">
+              <li>Maintains stable 90+ FPS on standalone Quest hardware</li>
+              <li>Stereoscopic Three.js render target &amp; 6DoF controller binding</li>
+              <li>Spatial audio buffers with low-latency positional audio</li>
+            </ul>
+            <div class="tool-tags">
+              <span>WebXR</span><span>Three.js</span><span>Meta Quest 3</span><span>Spatial Audio</span>
+            </div>
+            <div class="tool-actions">
+              <code class="tool-quick-run">git clone https://github.com/Ritabanm/meta-vr-dev</code>
+              <a href="https://github.com/Ritabanm/meta-vr-dev" target="_blank" rel="noopener noreferrer" class="c-btn primary sm">
+                View Repository &UpperRightArrow;
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="github-jump-strip" style="margin-top: 2rem;">
+          <span>Explore all open-source utilities and contributions:</span>
+          <a href="https://github.com/Ritabanm?tab=repositories" target="_blank" rel="noopener noreferrer" class="link-tag">
+            View All 50+ Repositories on GitHub &UpperRightArrow;
           </a>
         </div>
       </section>
@@ -316,7 +532,7 @@
   <!-- Toast Notification -->
   <div id="toast" class="toast-popup">Copied!</div>
 
-  <script src="app.js?v=2.8"></script>
+  <script src="app.js?v=3.2"></script>
 </body>
 
 </html>

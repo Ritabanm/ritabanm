@@ -90,7 +90,7 @@ const PROJECTS_DATA = [
       'Payload inspection filter preventing secondary injection'
     ],
     link: 'https://github.com/Ritabanm/OpenAI-Agent-Security',
-    recommendedFor: ['security'],
+    recommendedFor: ['security', 'tools'],
     rank: 4
   },
   {
@@ -108,7 +108,7 @@ const PROJECTS_DATA = [
       'Real-time cost estimation and latency SLA tradeoff curves'
     ],
     link: 'https://github.com/Ritabanm/SynthArch-RL',
-    recommendedFor: ['serving', 'distributed'],
+    recommendedFor: ['serving', 'distributed', 'tools'],
     rank: 5
   },
   {
@@ -126,7 +126,7 @@ const PROJECTS_DATA = [
       'Lightweight CLI with zero third-party agent overhead'
     ],
     link: 'https://github.com/Ritabanm/DevSecops-toolkit',
-    recommendedFor: ['security'],
+    recommendedFor: ['security', 'tools'],
     rank: 6
   },
   {
@@ -144,7 +144,7 @@ const PROJECTS_DATA = [
       'Cache alignment & interrupt handler optimization'
     ],
     link: 'https://github.com/Ritabanm/Hardware-programming-C',
-    recommendedFor: ['kernels'],
+    recommendedFor: ['kernels', 'tools'],
     rank: 7
   },
   {
@@ -180,7 +180,7 @@ const PROJECTS_DATA = [
       'Interactive live document synchronization engine'
     ],
     link: 'https://github.com/Ritabanm/texit-pdf',
-    recommendedFor: ['serving', 'security'],
+    recommendedFor: ['serving', 'security', 'tools'],
     rank: 9
   },
   {
@@ -198,7 +198,7 @@ const PROJECTS_DATA = [
       'High frame-rate VR scene optimization'
     ],
     link: 'https://github.com/Ritabanm/meta-vr-dev',
-    recommendedFor: ['kernels', 'serving'],
+    recommendedFor: ['kernels', 'serving', 'tools'],
     rank: 10
   }
 ];
@@ -730,8 +730,34 @@ function initSystemsAgent() {
       };
     }
 
+    // 7.5 Open Source Tools & CLIs
+    if (q.includes('tool') || q.includes('cli') || q.includes('open source') || q.includes('developer tool') || q.includes('utility')) {
+      return {
+        html: `Ritaban has authored and maintains several <strong>open source developer tools &amp; systems</strong>:<br><br>
+               &bull; <strong>SynthArch-RL:</strong> Browser-native RL system design planner for SLA optimization.<br>
+               &bull; <strong>DevSecops-toolkit:</strong> Automated vulnerability &amp; secret leak detection CLI for CI/CD.<br>
+               &bull; <strong>Hardware-programming-C:</strong> Bare-metal ARM Cortex-M peripheral driver suite.<br>
+               &bull; <strong>OpenAI-Agent-Security:</strong> Threat simulation framework &amp; sandboxing harness for tool calls.`,
+        actions: [
+          {
+            label: '🛠️ Open Tools Section',
+            onClick: () => {
+              switchView('tools');
+            }
+          },
+          {
+            label: 'Filter Projects by Tools',
+            onClick: () => {
+              switchView('work');
+              applyProjectFilters({ count: 10, recommendation: 'tools' });
+            }
+          }
+        ]
+      };
+    }
+
     // 8. Stack / Languages
-    if (q.includes('stack') || q.includes('language') || q.includes('tool') || q.includes('skill')) {
+    if (q.includes('stack') || q.includes('language') || q.includes('skill')) {
       return {
         html: `<strong>Languages &amp; Core Systems Stack:</strong><br>
                &bull; <strong>Languages:</strong> C++, C, CUDA, Python, Rust, Go, POSIX Shell<br>
@@ -1022,6 +1048,7 @@ function initConsole() {
   <ul>
     <li><code>now</code> &mdash; What I am building and scaling right now (2026)</li>
     <li><code>projects [3|5|10]</code> &mdash; Summary of my core systems projects (toggle Top 3, 5, or 10)</li>
+    <li><code>tools</code> &mdash; Open source developer tools &amp; CLIs I've built</li>
     <li><code>agent</code> &mdash; Open interactive Systems Agent chatbot assistant</li>
     <li><code>radar</code> &mdash; View dynamic contribution radar chart</li>
     <li><code>rec</code> &mdash; Get project recommendations by systems interest</li>
@@ -1032,6 +1059,26 @@ function initConsole() {
     <li><code>clear</code> &mdash; Clear the screen</li>
   </ul>
 </div>`,
+
+    tools: () => {
+      switchView('tools');
+      return `
+<div class="c-response" style="border-left-color: var(--cyan);">
+  <h4>Open Source Tools &amp; CLIs:</h4>
+  <p>Navigating to the <strong>Open Source Tools</strong> tab. Featured tools &amp; developer systems:</p>
+  <ul>
+    <li><strong>SynthArch-RL:</strong> Browser-native RL agent for system architecture &amp; SLA optimization.</li>
+    <li><strong>DevSecops-toolkit:</strong> Automated vulnerability scanning CLI &amp; CI/CD security gating.</li>
+    <li><strong>Hardware-programming-C:</strong> Bare-metal ARM Cortex-M peripheral drivers &amp; register suite.</li>
+    <li><strong>OpenAI-Agent-Security:</strong> Threat simulation framework &amp; containment sandbox for agent tool execution.</li>
+    <li><strong>texit-pdf:</strong> High-performance LaTeX to vector PDF engine running in-browser via WebAssembly.</li>
+    <li><strong>meta-vr-dev:</strong> Headless CI testing &amp; spatial computing harness for Meta Quest / VR runtimes.</li>
+  </ul>
+  <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+    <button class="agent-action-btn" onclick="switchView('tools')">View Tools Tab</button>
+  </div>
+</div>`;
+    },
 
     agent: () => {
       if (window.openSystemsAgent) {

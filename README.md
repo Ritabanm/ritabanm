@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/ritabanmitra709%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </a>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Ritabanm/ritabanm/main/assets/contribution-radar.svg" alt="Contribution Focus" width="680" />
+  <img src="https://cdn.jsdelivr.net/gh/Ritabanm/ritabanm@main/assets/contribution-radar.svg" alt="Contribution Focus" width="680" />
 </p>
 
 ### Languages and Core Tools:
