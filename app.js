@@ -788,7 +788,7 @@ function initSystemsAgent() {
           {
             label: 'Read ADAPT-IQ Writeup',
             onClick: () => {
-              window.open('https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/adapt-iq', '_blank');
+              window.open('https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/adapt-iq-measuring-ai-cognitive-flexibility', '_blank');
             }
           },
           {
@@ -1228,7 +1228,7 @@ function initConsole() {
   <ul>
     <li>
       <strong>ADAPT-IQ (2026):</strong> Context-Injection Creativity Test (CICT) for Measuring Cognitive Flexibility in Frontier AI &bull; <em>Google DeepMind &times; Kaggle AGI Challenge</em><br>
-      <a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/adapt-iq" target="_blank" style="color:var(--cyan); font-size:0.8rem;">Read Kaggle Writeup &UpperRightArrow;</a> &bull; 
+      <a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/adapt-iq-measuring-ai-cognitive-flexibility" target="_blank" style="color:var(--cyan); font-size:0.8rem;">Read Kaggle Writeup &UpperRightArrow;</a> &bull; 
       <a href="https://github.com/Ritabanm/adapt-iq" target="_blank" style="color:var(--cyan); font-size:0.8rem;">Benchmark Repo &UpperRightArrow;</a>
     </li>
     <li style="margin-top: 0.5rem;">
