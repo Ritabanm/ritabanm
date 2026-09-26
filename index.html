@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3.3">
+  <link rel="stylesheet" href="style.css?v=3.4">
 </head>
 
 <body>
@@ -37,6 +37,7 @@
       <nav class="nav-tabs">
         <button class="tab-btn active" data-view="console">Console</button>
         <button class="tab-btn" data-view="work">Work &amp; Code</button>
+        <button class="tab-btn" data-view="research">Research</button>
         <button class="tab-btn" data-view="tools">Open Source Tools</button>
         <button class="tab-btn" data-view="contact">Contact</button>
       </nav>
@@ -95,6 +96,7 @@
             <span class="chips-label">TAP TO RUN:</span>
             <button class="chip" data-cmd="now">now</button>
             <button class="chip" data-cmd="projects">projects</button>
+            <button class="chip" data-cmd="research">research</button>
             <button class="chip" data-cmd="tools">tools</button>
             <button class="chip" data-cmd="agent">agent</button>
             <button class="chip" data-cmd="radar">radar</button>
@@ -211,6 +213,131 @@
           <span>Looking for all experiments and commits?</span>
           <a href="https://github.com/Ritabanm?tab=repositories" target="_blank" rel="noopener noreferrer"
             class="link-tag">
+            View All Repositories on GitHub &UpperRightArrow;
+          </a>
+        </div>
+      <!-- VIEW 2.5: RESEARCH & PUBLICATIONS -->
+      <section id="view-research" class="tab-pane">
+        <div class="section-hero" style="margin-bottom: 1.5rem;">
+          <h2 class="section-title" style="font-size: 1.75rem; font-weight: 800; color: var(--text-white);">
+            Academic Research &amp; Publications
+          </h2>
+          <p class="section-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem; max-width: 720px;">
+            Peer-reviewed parallel computing literature and frontier AI benchmark frameworks authored by Ritaban Mitra.
+          </p>
+        </div>
+
+        <!-- Google Scholar Verified Profile Banner -->
+        <div class="scholar-strip" style="margin-bottom: 2rem;">
+          <div class="s-left">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <div style="width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, #1e3a8a, #06b6d4); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                🎓
+              </div>
+              <div>
+                <div style="font-size: 1.1rem; font-weight: 700; color: var(--text-white);">Ritaban Mitra</div>
+                <div style="font-size: 0.82rem; color: var(--text-muted);">
+                  University at Buffalo &bull; <span style="color: var(--cyan);">Verified email at buffalo.edu</span>
+                </div>
+              </div>
+            </div>
+            <div class="s-topics" style="margin-top: 0.65rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
+              <span class="pill" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;">Machine Learning Systems</span>
+              <span class="pill" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;">Distributed Systems</span>
+              <span class="pill" style="font-size: 0.72rem; padding: 0.15rem 0.5rem;">Computer Architecture</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.65rem;">
+            <div class="s-stats">
+              <div class="s-pill"><strong>10</strong> Citations</div>
+              <div class="s-pill">h-index: <strong>1</strong></div>
+              <div class="s-pill">i10-index: <strong>1</strong></div>
+            </div>
+            <a href="https://scholar.google.com/scholar?q=Ritaban+Mitra+University+at+Buffalo" target="_blank" rel="noopener noreferrer" class="paper-link" style="font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.3rem;">
+              <span>Google Scholar Profile</span> &UpperRightArrow;
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Papers Stack -->
+        <div class="papers-grid">
+          <!-- Paper 1: ADAPT-IQ -->
+          <article class="paper-card">
+            <div class="paper-meta">
+              <span class="year">2026</span>
+              <span class="venue">&bull; Google DeepMind &times; Kaggle AGI Challenge</span>
+              <span class="badge-pill">Frontier AI Benchmark</span>
+            </div>
+            <h3>ADAPT-IQ: Context-Injection Creativity Test (CICT) for Measuring Cognitive Flexibility</h3>
+            <div class="paper-authors">
+              <span>Author:</span> <strong>Ritaban Mitra</strong>
+            </div>
+            <p class="plain-desc">
+              Evaluates whether frontier foundation models possess genuine cognitive flexibility or merely reproduce memorized training distributions. ADAPT-IQ introduces the Context-Injection Creativity Test (CICT), a rigorous dynamic evaluation harness measuring counterfactual reasoning latency, adaptation accuracy, and recovery under rapid constraint mutations in multi-turn agent loops.
+            </p>
+            <ul class="project-highlights" style="margin-bottom: 1.25rem;">
+              <li>Context-Injection Creativity Test (CICT) dynamic evaluation harness</li>
+              <li>Quantifies real-time counterfactual reasoning latency &amp; rule mutation adaptation</li>
+              <li>Zero-shot evaluation suite designed for frontier LLMs &amp; reasoning models</li>
+            </ul>
+            <div class="tool-tags" style="margin-bottom: 1.25rem;">
+              <span>Cognitive Flexibility</span>
+              <span>Frontier LLMs</span>
+              <span>AGI Benchmark</span>
+              <span>Context Injection</span>
+              <span>Python</span>
+            </div>
+            <div class="tool-btns">
+              <a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/adapt-iq" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                📊 Read Kaggle Writeup &UpperRightArrow;
+              </a>
+              <a href="https://github.com/Ritabanm/adapt-iq" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                View Benchmark Code &UpperRightArrow;
+              </a>
+            </div>
+          </article>
+
+          <!-- Paper 2: Stroke Prediction RF vs SVM -->
+          <article class="paper-card">
+            <div class="paper-meta">
+              <span class="year">2022</span>
+              <span class="venue">&bull; Advances in Parallel Computing (IOS Press), Vol. 41, pp. 530&ndash;536</span>
+              <span class="citations-tag">🏆 10 Citations</span>
+            </div>
+            <h3>Efficient Prediction of Stroke Patients Using Random Forest Algorithm in Comparison to Support Vector Machine</h3>
+            <div class="paper-authors">
+              <span>Authors:</span> <strong>Ritaban Mitra</strong>, <span>T. Rajendran</span>
+            </div>
+            <p class="plain-desc">
+              A comparative parallelized machine learning study analyzing ensemble classification against hyperplane kernels for high-dimensional clinical stroke prognosis. Demonstrates that ensemble decision trees achieve statistically significant accuracy advantages (<em>p &lt; 0.05</em>) over support vector machines when operating on multi-variable patient diagnostics under parallel computational constraints.
+            </p>
+            <ul class="project-highlights" style="margin-bottom: 1.25rem;">
+              <li>Statistically significant ensemble classification performance verified via SPSS (p &lt; 0.05)</li>
+              <li>Parallelized predictive modeling pipeline evaluated on high-dimensional clinical variables</li>
+              <li>Published in <em>Advances in Parallel Computing Algorithms, Tools and Paradigms</em> &amp; indexed in Scopus/Scholar</li>
+            </ul>
+            <div class="tool-tags" style="margin-bottom: 1.25rem;">
+              <span>Parallel Computing</span>
+              <span>Random Forest</span>
+              <span>Support Vector Machine</span>
+              <span>Clinical ML</span>
+              <span>Ensemble Methods</span>
+            </div>
+            <div class="tool-btns">
+              <a href="https://www.researchgate.net/publication/366052737_Efficient_Prediction_of_Stroke_Patients_Using_Random_Forest_Algorithm_in_Comparison_to_Support_Vector_Machine" target="_blank" rel="noopener noreferrer" class="c-btn live-btn sm">
+                📄 View Publication &UpperRightArrow;
+              </a>
+              <a href="https://scholar.google.com/scholar?q=Efficient+prediction+of+stroke+patients+using+random+forest+algorithm+in+comparison+to+support+vector+machine+Ritaban+Mitra" target="_blank" rel="noopener noreferrer" class="c-btn repo-btn sm">
+                Google Scholar Entry &UpperRightArrow;
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="github-jump-strip" style="margin-top: 2rem;">
+          <span>Explore all benchmarks, datasets, and code:</span>
+          <a href="https://github.com/Ritabanm?tab=repositories" target="_blank" rel="noopener noreferrer" class="link-tag">
             View All Repositories on GitHub &UpperRightArrow;
           </a>
         </div>
@@ -802,7 +929,7 @@
   <!-- Toast Notification -->
   <div id="toast" class="toast-popup">Copied!</div>
 
-  <script src="app.js?v=3.3"></script>
+  <script src="app.js?v=3.4"></script>
 </body>
 
 </html>

@@ -771,6 +771,36 @@ function initSystemsAgent() {
       };
     }
 
+    // 7.8 Academic Research & Publications
+    if (q.includes('research') || q.includes('paper') || q.includes('publication') || q.includes('scholar') || q.includes('academic') || q.includes('adapt-iq') || q.includes('stroke')) {
+      return {
+        html: `Ritaban has authored <strong>academic research and benchmark literature</strong>:<br><br>
+               1. <strong>ADAPT-IQ (2026):</strong> Context-Injection Creativity Test (CICT) measuring cognitive flexibility in frontier models (Google DeepMind &times; Kaggle AGI Challenge).<br>
+               2. <strong>Stroke Patient Prediction (2022):</strong> Parallelized predictive modeling using Random Forest vs. SVM (10 Citations, <em>Advances in Parallel Computing</em>).<br><br>
+               Verified researcher at <strong>University at Buffalo</strong> with 10 citations on Google Scholar.`,
+        actions: [
+          {
+            label: '🎓 Go to Research Tab',
+            onClick: () => {
+              switchView('research');
+            }
+          },
+          {
+            label: 'Read ADAPT-IQ Writeup',
+            onClick: () => {
+              window.open('https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/adapt-iq', '_blank');
+            }
+          },
+          {
+            label: 'View Stroke Paper',
+            onClick: () => {
+              window.open('https://www.researchgate.net/publication/366052737_Efficient_Prediction_of_Stroke_Patients_Using_Random_Forest_Algorithm_in_Comparison_to_Support_Vector_Machine', '_blank');
+            }
+          }
+        ]
+      };
+    }
+
     // 8. Stack / Languages
     if (q.includes('stack') || q.includes('language') || q.includes('skill')) {
       return {
@@ -1063,7 +1093,8 @@ function initConsole() {
   <ul>
     <li><code>now</code> &mdash; What I am building and scaling right now (2026)</li>
     <li><code>projects [3|5|10]</code> &mdash; Summary of my core systems projects (toggle Top 3, 5, or 10)</li>
-    <li><code>tools</code> &mdash; Open source developer tools &amp; CLIs I've built</li>
+    <li><code>research</code> &mdash; Academic publications &amp; AI benchmarks (Google Scholar)</li>
+    <li><code>tools</code> &mdash; Open source developer tools &amp; live apps I've built</li>
     <li><code>agent</code> &mdash; Open interactive Systems Agent chatbot assistant</li>
     <li><code>radar</code> &mdash; View dynamic contribution radar chart</li>
     <li><code>rec</code> &mdash; Get project recommendations by systems interest</li>
@@ -1188,14 +1219,33 @@ function initConsole() {
   </ul>
 </div>`,
 
-    papers: () => `
-<div class="c-response">
-  <h4>Work &amp; Code:</h4>
-  <p>The research papers section has been temporarily removed. You can explore all systems, benchmarks, and codebases in the <strong>Work &amp; Code</strong> tab.</p>
-  <div style="margin-top: 0.5rem;">
-    <button class="agent-action-btn" onclick="switchView('work')">Explore Work &amp; Code</button>
+    research: () => {
+      switchView('research');
+      return `
+<div class="c-response" style="border-left-color: var(--cyan);">
+  <h4>Academic Research &amp; Publications:</h4>
+  <p>Switched to the <strong>Research</strong> tab. Featured peer-reviewed research &amp; benchmarks:</p>
+  <ul>
+    <li>
+      <strong>ADAPT-IQ (2026):</strong> Context-Injection Creativity Test (CICT) for Measuring Cognitive Flexibility in Frontier AI &bull; <em>Google DeepMind &times; Kaggle AGI Challenge</em><br>
+      <a href="https://www.kaggle.com/competitions/kaggle-measuring-agi/writeups/adapt-iq" target="_blank" style="color:var(--cyan); font-size:0.8rem;">Read Kaggle Writeup &UpperRightArrow;</a> &bull; 
+      <a href="https://github.com/Ritabanm/adapt-iq" target="_blank" style="color:var(--cyan); font-size:0.8rem;">Benchmark Repo &UpperRightArrow;</a>
+    </li>
+    <li style="margin-top: 0.5rem;">
+      <strong>Stroke Patient Prediction (2022):</strong> Efficient prediction of stroke patients using random forest algorithm in comparison to support vector machine (10 Citations) &bull; <em>Advances in Parallel Computing (IOS Press)</em><br>
+      <a href="https://www.researchgate.net/publication/366052737_Efficient_Prediction_of_Stroke_Patients_Using_Random_Forest_Algorithm_in_Comparison_to_Support_Vector_Machine" target="_blank" style="color:var(--cyan); font-size:0.8rem;">View Publication &UpperRightArrow;</a> &bull;
+      <a href="https://scholar.google.com/scholar?q=Ritaban+Mitra+University+at+Buffalo" target="_blank" style="color:var(--cyan); font-size:0.8rem;">Google Scholar &UpperRightArrow;</a>
+    </li>
+  </ul>
+  <div style="margin-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+    <button class="agent-action-btn" onclick="switchView('research')">View Research Section</button>
   </div>
-</div>`,
+</div>`;
+    },
+
+    papers: function() {
+      return this.research();
+    },
 
     radar: () => `
 <div class="c-response" style="border-left-color: var(--cyan); text-align: center;">
@@ -1295,7 +1345,7 @@ function initConsole() {
     } else if (e.key === 'Tab') {
       e.preventDefault();
       const current = input.value.trim();
-      const cmds = ['now', 'projects', 'agent', 'rec', 'whoami', 'stack', 'papers', 'benchmarks', 'contact', 'help', 'clear'];
+      const cmds = ['now', 'projects', 'research', 'tools', 'agent', 'rec', 'whoami', 'stack', 'papers', 'benchmarks', 'contact', 'help', 'clear'];
       const match = cmds.find(c => c.startsWith(current));
       if (match) input.value = match;
     }
