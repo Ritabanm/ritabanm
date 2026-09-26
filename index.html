@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritaban Mitra &bull; Systems Engineer</title>
+  <meta name="description"
+    content="Personal site of Ritaban Mitra. I build fast infrastructure for AI: low-latency agent runtimes, smart memory caching, and distributed GPU systems.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=2.6">
+</head>
+
+<body>
+  <!-- Dynamic Neon Light Movement Canvas & Ambient Glows -->
+  <canvas id="neon-glow-canvas"></canvas>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <div class="site-wrapper">
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="brand">
+        <span class="status-dot"></span>
+        <span class="brand-name">Ritaban Mitra</span>
+        <span class="brand-sub">infra systems engineer</span>
+      </div>
+
+      <nav class="nav-tabs">
+        <button class="tab-btn active" data-view="console">Console</button>
+        <button class="tab-btn" data-view="work">Work &amp; Code</button>
+        <button class="tab-btn" data-view="contact">Contact</button>
+      </nav>
+
+      <div class="top-actions">
+        <a href="mailto:ritabanmitra709@gmail.com" class="action-btn email-btn" title="Send Email">
+          <span>ritabanmitra709@gmail.com</span>
+        </a>
+        <a href="https://github.com/Ritabanm" target="_blank" rel="noopener noreferrer" class="action-btn icon-btn"
+          title="GitHub">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- VIEW 1: CONSOLE (Default, Fast, Interactive) -->
+      <section id="view-console" class="tab-pane active">
+        <!-- Punchy Hero -->
+        <div class="hero-box">
+          <h1 class="hero-title">
+            I make AI fast by fixing where it gets stuck: <span class="highlight">memory</span>.
+          </h1>
+          <p class="hero-desc">
+            When an AI model pauses to use a tool (search the web, run Python code, or query a database),
+            normal servers throw away the conversation memory and re-read everything from scratch.
+            I build low-latency runtimes and memory caches so models remember context instantly.
+          </p>
+          <div class="hero-pills">
+            <span class="pill">C++ &bull; CUDA &bull; Python &bull; Rust</span>
+            <span class="pill">GPU Memory (HBM3e)</span>
+            <span class="pill">vLLM &bull; TorchTitan</span>
+            <span class="pill">Distributed Systems &bull; GPU Acceleration</span>
+          </div>
+        </div>
+
+        <!-- Interactive Terminal Console Window -->
+        <div class="console-window">
+          <div class="console-titlebar">
+            <div class="console-dots">
+              <span class="dot red" title="Clear"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="console-title">ritaban@cluster:~ (zsh) &mdash; type commands or click below</div>
+            <div class="console-hint hide-mobile">tab to autocomplete</div>
+          </div>
+
+          <!-- Clickable Command Quickbar -->
+          <div class="quick-chips">
+            <span class="chips-label">TAP TO RUN:</span>
+            <button class="chip" data-cmd="now">now</button>
+            <button class="chip" data-cmd="projects">projects</button>
+            <button class="chip" data-cmd="agent">agent</button>
+            <button class="chip" data-cmd="benchmarks">benchmarks</button>
+            <button class="chip" data-cmd="whoami">whoami</button>
+            <button class="chip" data-cmd="stack">stack</button>
+            <button class="chip" data-cmd="contact">contact</button>
+            <button class="chip" data-cmd="clear">clear</button>
+          </div>
+
+          <!-- Output Screen -->
+          <div class="console-body" id="console-screen">
+            <div id="console-output">
+              <!-- Initial Welcome Message rendered by JS -->
+            </div>
+
+            <!-- Active Prompt Row -->
+            <div class="console-prompt-row">
+              <span class="prompt-text">ritaban@h100:~$</span>&nbsp;
+              <input type="text" id="console-input" class="console-input" autocomplete="off" spellcheck="false"
+                placeholder="type 'now', 'projects', 'help'..." autofocus>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 2: WORK & CODE (Zero fluff, plain English descriptions of projects) -->
+      <section id="view-work" class="tab-pane">
+        <div class="section-intro">
+          <h2>Stuff I've Built</h2>
+          <p>
+            Real systems, open-source code, and hardware benchmarks.
+          </p>
+        </div>
+
+        <!-- Interactive Agent Matchmaker Banner -->
+        <div class="agent-match-banner">
+          <div class="match-left">
+            <span class="match-spark">⚡</span>
+            <div>
+              <strong>Looking for specific engineering capabilities?</strong>
+              <span class="match-sub">Ask the interactive Systems Agent for tailored recommendations based on your stack.</span>
+            </div>
+          </div>
+          <button id="launch-agent-btn" class="agent-cta-btn">Ask Systems Agent &rarr;</button>
+        </div>
+
+        <!-- Unified Systems Control Deck -->
+        <div class="control-deck">
+          <!-- Row 1: Recommendation by Domain -->
+          <div class="deck-row-rec">
+            <span class="deck-label">RECOMMEND BY DOMAIN:</span>
+            <div class="rec-chips" id="recommend-chips">
+              <button class="rec-chip active" data-rec="all">All Specialties</button>
+              <button class="rec-chip" data-rec="serving">⚡ Fast AI Serving &amp; Caching</button>
+              <button class="rec-chip" data-rec="distributed">🌐 Multi-GPU &amp; 3D Parallelism</button>
+              <button class="rec-chip" data-rec="security">🛡️ Security &amp; Benchmarks</button>
+              <button class="rec-chip" data-rec="kernels">💻 CUDA &amp; Low-Level Kernels</button>
+            </div>
+          </div>
+
+          <!-- Row 2: View Controls (Count, Depth, View Mode) -->
+          <div class="deck-row-controls">
+            <div class="deck-group">
+              <span class="deck-sublabel">SHOW:</span>
+              <div class="segmented-pill" id="count-toggle">
+                <button class="seg-pill-btn active" data-count="3">Top 3</button>
+                <button class="seg-pill-btn" data-count="5">Top 5</button>
+                <button class="seg-pill-btn" data-count="10">All 10</button>
+              </div>
+            </div>
+
+            <div class="deck-group">
+              <span class="deck-sublabel">DEPTH:</span>
+              <div class="segmented-pill" id="detail-toggle">
+                <button class="seg-pill-btn active" data-detail="compact">Compact</button>
+                <button class="seg-pill-btn" data-detail="deep">Deep Dive</button>
+              </div>
+
+              <span class="deck-sublabel" style="margin-left: 0.5rem;">VIEW:</span>
+              <div class="segmented-pill" id="layout-toggle">
+                <button class="seg-pill-btn active" data-layout="cards" title="Cards Grid">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  <span>Cards</span>
+                </button>
+                <button class="seg-pill-btn" data-layout="list" title="Compact List View">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg>
+                  <span>List</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Render Container (Populated by app.js with 10 projects) -->
+        <div id="work-render-container" class="work-render-container cards-layout compact-mode">
+          <!-- Rendered dynamically via app.js -->
+        </div>
+
+        <div class="github-jump-strip">
+          <span>Looking for all experiments and commits?</span>
+          <a href="https://github.com/Ritabanm?tab=repositories" target="_blank" rel="noopener noreferrer"
+            class="link-tag">
+            View All Repositories on GitHub &UpperRightArrow;
+          </a>
+        </div>
+      </section>
+
+      <!-- VIEW 4: CONTACT (Direct & Simple) -->
+      <section id="view-contact" class="tab-pane">
+        <div class="contact-card">
+          <h2>Let's Talk Systems.</h2>
+          <p>
+            Whether you want to talk about fast inference runtimes, GPU memory bottlenecks, or infrastructure
+            engineering opportunities:
+          </p>
+
+          <div class="direct-contact-box">
+            <div class="email-display">
+              <span class="label">EMAIL</span>
+              <span class="address" id="contact-email">ritabanmitra709@gmail.com</span>
+            </div>
+            <div class="contact-btns">
+              <button id="copy-email-btn" class="c-btn primary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy Email</span>
+              </button>
+              <a href="mailto:ritabanmitra709@gmail.com" class="c-btn secondary">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Email</span>
+              </a>
+              <a href="https://github.com/Ritabanm" target="_blank" rel="noopener noreferrer" class="c-btn ghost">
+                <span>GitHub Profile &UpperRightArrow;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Telemetry Ticker -->
+    <footer class="bottom-bar">
+      <div class="bot-left">
+        <span>AI Infrastructure &bull; Low-Latency Systems</span>
+      </div>
+      <div class="bot-right">
+        <span>Open Source &bull; Systems Engineering</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Floating Systems Agent Chatbot Trigger -->
+  <button id="agent-fab" class="agent-fab" title="Chat with Systems Agent">
+    <span class="agent-fab-icon">⚡</span>
+    <span class="agent-fab-text">Ask Systems Agent</span>
+    <span class="online-indicator"></span>
+  </button>
+
+  <!-- Systems Agent Chatbot Drawer -->
+  <div id="agent-drawer" class="agent-drawer" aria-hidden="true">
+    <div class="agent-header">
+      <div class="agent-header-info">
+        <span class="agent-dot"></span>
+        <div>
+          <strong class="agent-title">Systems Agent // RM-1</strong>
+          <span class="agent-sub">Interactive Portfolio Guide</span>
+        </div>
+      </div>
+      <button id="agent-close-btn" class="agent-close-btn" title="Close Agent">&times;</button>
+    </div>
+
+    <div class="agent-body" id="agent-chat-body">
+      <div class="agent-msg bot">
+        Hi! I can guide you through Ritaban's work. What kind of engineering challenges is your team looking to solve?
+      </div>
+      <div class="agent-quick-prompts" id="agent-quick-prompts">
+        <button class="prompt-chip" data-q="Recommend projects for low-latency serving">Recommend projects for
+          low-latency serving</button>
+        <button class="prompt-chip" data-q="What is his experience with multi-GPU and 3D parallelism?">What is his
+          experience with multi-GPU &amp; 3D parallelism?</button>
+        <button class="prompt-chip" data-q="Tell me about the DeepMind / Kaggle AGI benchmark">Tell me about the
+          DeepMind / Kaggle benchmark</button>
+        <button class="prompt-chip" data-q="What languages and systems does he use?">What languages &amp; systems does
+          he use?</button>
+        <button class="prompt-chip" data-q="How can I contact him?">How can I contact him?</button>
+      </div>
+    </div>
+
+    <div class="agent-footer">
+      <input type="text" id="agent-input" class="agent-input"
+        placeholder="Ask about projects, stack, or recommendations..." autocomplete="off">
+      <button id="agent-send-btn" class="agent-send-btn" title="Send Message">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast-popup">Copied!</div>
+
+  <script src="app.js?v=2.6"></script>
+</body>
+
+</html>
