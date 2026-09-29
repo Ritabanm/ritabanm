@@ -465,6 +465,7 @@ window.switchView = switchView;
 function initSystemsAgent() {
   const fab = document.getElementById('agent-fab');
   const drawer = document.getElementById('agent-drawer');
+  const backdrop = document.getElementById('agent-backdrop');
   const closeBtn = document.getElementById('agent-close-btn');
   const chatBody = document.getElementById('agent-chat-body');
   const input = document.getElementById('agent-input');
@@ -473,15 +474,23 @@ function initSystemsAgent() {
 
   if (!fab || !drawer) return;
 
+  const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+
   function openDrawer() {
     drawer.classList.add('open');
     drawer.setAttribute('aria-hidden', 'false');
-    if (input) input.focus();
+    if (backdrop) backdrop.classList.add('show');
+    if (window.innerWidth <= 768) {
+      document.body.style.overflow = 'hidden';
+    }
+    if (input && !isTouch) input.focus();
   }
 
   function closeDrawer() {
     drawer.classList.remove('open');
     drawer.setAttribute('aria-hidden', 'true');
+    if (backdrop) backdrop.classList.remove('show');
+    document.body.style.overflow = '';
   }
 
   fab.addEventListener('click', () => {
@@ -489,6 +498,16 @@ function initSystemsAgent() {
       closeDrawer();
     } else {
       openDrawer();
+    }
+  });
+
+  if (backdrop) {
+    backdrop.addEventListener('click', closeDrawer);
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
     }
   });
 
@@ -874,11 +893,14 @@ function initNeonCanvas() {
   let height = (canvas.height = window.innerHeight);
 
   window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+    // Prevent re-rendering on mobile address bar collapse (height-only small shifts)
+    if (Math.abs(window.innerWidth - width) > 10 || Math.abs(window.innerHeight - height) > 100) {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
   });
 
-  // Mouse interaction
+  // Mouse & Touch interaction
   let mouseX = width / 2;
   let mouseY = height / 2;
   let targetMouseX = width / 2;
@@ -888,6 +910,13 @@ function initNeonCanvas() {
     targetMouseX = e.clientX;
     targetMouseY = e.clientY;
   });
+
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches[0]) {
+      targetMouseX = e.touches[0].clientX;
+      targetMouseY = e.touches[0].clientY;
+    }
+  }, { passive: true });
 
   // Floating neon plasma lights
   const lights = [
@@ -1003,6 +1032,7 @@ function switchView(viewName) {
   tabBtns.forEach(b => {
     if (b.getAttribute('data-view') === viewName) {
       b.classList.add('active');
+      b.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     } else {
       b.classList.remove('active');
     }
@@ -1016,9 +1046,10 @@ function switchView(viewName) {
     }
   });
 
+  const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
   if (viewName === 'console') {
     const input = document.getElementById('console-input');
-    if (input) input.focus();
+    if (input && !isTouch) input.focus();
   }
 }
 

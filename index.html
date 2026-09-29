@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Ritaban Mitra &bull; Systems Engineer</title>
   <meta name="description"
     content="Personal site of Ritaban Mitra. I build fast infrastructure for AI: low-latency agent runtimes, smart memory caching, and distributed GPU systems.">
@@ -117,7 +117,7 @@
             <div class="console-prompt-row">
               <span class="prompt-text">ritaban@h100:~$</span>&nbsp;
               <input type="text" id="console-input" class="console-input" autocomplete="off" spellcheck="false"
-                placeholder="type 'now', 'projects', 'help'..." autofocus>
+                placeholder="type 'now', 'projects', 'help'...">
             </div>
           </div>
         </div>
@@ -879,6 +879,9 @@
 
   </div>
 
+  <!-- Drawer Backdrop Overlay -->
+  <div id="agent-backdrop" class="agent-backdrop"></div>
+
   <!-- Floating Systems Agent Chatbot Trigger -->
   <button id="agent-fab" class="agent-fab" title="Chat with Systems Agent">
     <span class="agent-fab-icon">⚡</span>
@@ -888,6 +891,7 @@
 
   <!-- Systems Agent Chatbot Drawer -->
   <div id="agent-drawer" class="agent-drawer" aria-hidden="true">
+    <div class="drawer-drag-handle"></div>
     <div class="agent-header">
       <div class="agent-header-info">
         <span class="agent-dot"></span>
